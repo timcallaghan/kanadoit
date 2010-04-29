@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61CDD108-4B50-421A-8CB1-F9C9ECCF28DB}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KanaDoIT</RootNamespace>
+    <AssemblyName>KanaDoIT</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>KanaDoIT.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>KanaDoIT.App</SilverlightAppEntry>
+    <TestPageFileName>KanaDoITTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>..\KanaDoIT.Web\KanaDoIT.Web.csproj</LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Client.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web.Extensions, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Windows.Controls" />
+    <Reference Include="System.Windows.Controls.Navigation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Code\KanaInfo.cs" />
+    <Compile Include="Code\NounInfo.cs" />
+    <Compile Include="Views\ErrorWindow.xaml.cs">
+      <DependentUpon>ErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hiragana.xaml.cs">
+      <DependentUpon>Hiragana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Katakana.xaml.cs">
+      <DependentUpon>Katakana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Nouns.xaml.cs">
+      <DependentUpon>Nouns.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Resource Include="Assets\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fonts\PJ_Hiragana.ttf" />
+    <Resource Include="Fonts\PJ_Katakana.ttf" />
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\a.mp3" />
+    <Resource Include="Sounds\aa.mp3" />
+    <Resource Include="Sounds\ba.mp3" />
+    <Resource Include="Sounds\be.mp3" />
+    <Resource Include="Sounds\bi.mp3" />
+    <Resource Include="Sounds\bo.mp3" />
+    <Resource Include="Sounds\bu.mp3" />
+    <Resource Include="Sounds\bya.mp3" />
+    <Resource Include="Sounds\byo.mp3" />
+    <Resource Include="Sounds\byu.mp3" />
+    <Resource Include="Sounds\cha.mp3" />
+    <Resource Include="Sounds\chi.mp3" />
+    <Resource Include="Sounds\cho.mp3" />
+    <Resource Include="Sounds\chu.mp3" />
+    <Resource Include="Sounds\da.mp3" />
+    <Resource Include="Sounds\de.mp3" />
+    <Resource Include="Sounds\do.mp3" />
+    <Resource Include="Sounds\e.mp3" />
+    <Resource Include="Sounds\ee.mp3" />
+    <Resource Include="Sounds\fu.mp3" />
+    <Resource Include="Sounds\ga.mp3" />
+    <Resource Include="Sounds\ge.mp3" />
+    <Resource Include="Sounds\gi.mp3" />
+    <Resource Include="Sounds\go.mp3" />
+    <Resource Include="Sounds\gu.mp3" />
+    <Resource Include="Sounds\gya.mp3" />
+    <Resource Include="Sounds\gyo.mp3" />
+    <Resource Include="Sounds\gyu.mp3" />
+    <Resource Include="Sounds\ha.mp3" />
+    <Resource Include="Sounds\he.mp3" />
+    <Resource Include="Sounds\hi.mp3" />
+    <Resource Include="Sounds\ho.mp3" />
+    <Resource Include="Sounds\hya.mp3" />
+    <Resource Include="Sounds\hyo.mp3" />
+    <Resource Include="Sounds\hyu.mp3" />
+    <Resource Include="Sounds\i.mp3" />
+    <Resource Include="Sounds\ii.mp3" />
+    <Resource Include="Sounds\ja_jya.mp3" />
+    <Resource Include="Sounds\ji_d.mp3" />
+    <Resource Include="Sounds\ji_z.mp3" />
+    <Resource Include="Sounds\jo_jyo.mp3" />
+    <Resource Include="Sounds\ju_jyu.mp3" />
+    <Resource Include="Sounds\ka.mp3" />
+    <Resource Include="Sounds\ke.mp3" />
+    <Resource Include="Sounds\ki.mp3" />
+    <Resource Include="Sounds\kippu.mp3" />
+    <Resource Include="Sounds\kitte.mp3" />
+    <Resource Include="Sounds\ko.mp3" />
+    <Resource Include="Sounds\ku.mp3" />
+    <Resource Include="Sounds\kya.mp3" />
+    <Resource Include="Sounds\kyo.mp3" />
+    <Resource Include="Sounds\kyu.mp3" />
+    <Resource Include="Sounds\ma.mp3" />
+    <Resource Include="Sounds\me.mp3" />
+    <Resource Include="Sounds\mi.mp3" />
+    <Resource Include="Sounds\mo.mp3" />
+    <Resource Include="Sounds\mu.mp3" />
+    <Resource Include="Sounds\mya.mp3" />
+    <Resource Include="Sounds\myo.mp3" />
+    <Resource Include="Sounds\myu.mp3" />
+    <Resource Include="Sounds\n.mp3" />
+    <Resource Include="Sounds\na.mp3" />
+    <Resource Include="Sounds\ne.mp3" />
+    <Resource Include="Sounds\ni.mp3" />
+    <Resource Include="Sounds\no.mp3" />
+    <Resource Include="Sounds\nu.mp3" />
+    <Resource Include="Sounds\nya.mp3" />
+    <Resource Include="Sounds\nyo.mp3" />
+    <Resource Include="Sounds\nyu.mp3" />
+    <Resource Include="Sounds\o.mp3" />
+    <Resource Include="Sounds\oo.mp3" />
+    <Resource Include="Sounds\o_w.mp3" />
+    <Resource Include="Sounds\pa.mp3" />
+    <Resource Include="Sounds\pe.mp3" />
+    <Resource Include="Sounds\pi.mp3" />
+    <Resource Include="Sounds\po.mp3" />
+    <Resource Include="Sounds\pu.mp3" />
+    <Resource Include="Sounds\pya.mp3" />
+    <Resource Include="Sounds\pyo.mp3" />
+    <Resource Include="Sounds\pyu.mp3" />
+    <Resource Include="Sounds\ra.mp3" />
+    <Resource Include="Sounds\re.mp3" />
+    <Resource Include="Sounds\ri.mp3" />
+    <Resource Include="Sounds\ro.mp3" />
+    <Resource Include="Sounds\ru.mp3" />
+    <Resource Include="Sounds\rya.mp3" />
+    <Resource Include="Sounds\ryo.mp3" />
+    <Resource Include="Sounds\ryu.mp3" />
+    <Resource Include="Sounds\sa.mp3" />
+    <Resource Include="Sounds\se.mp3" />
+    <Resource Include="Sounds\sha.mp3" />
+    <Resource Include="Sounds\shi.mp3" />
+    <Resource Include="Sounds\sho.mp3" />
+    <Resource Include="Sounds\shu.mp3" />
+    <Resource Include="Sounds\so.mp3" />
+    <Resource Include="Sounds\su.mp3" />
+    <Resource Include="Sounds\ta.mp3" />
+    <Resource Include="Sounds\te.mp3" />
+    <Resource Include="Sounds\to.mp3" />
+    <Resource Include="Sounds\tsu.mp3" />
+    <Resource Include="Sounds\u.mp3" />
+    <Resource Include="Sounds\uu.mp3" />
+    <Resource Include="Sounds\wa.mp3" />
+    <Resource Include="Sounds\ya.mp3" />
+    <Resource Include="Sounds\yo.mp3" />
+    <Resource Include="Sounds\yu.mp3" />
+    <Resource Include="Sounds\za.mp3" />
+    <Resource Include="Sounds\ze.mp3" />
+    <Resource Include="Sounds\zo.mp3" />
+    <Resource Include="Sounds\zu.mp3" />
+    <Resource Include="Sounds\zu_d.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Katakana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Hiragana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Nouns.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LX_Black_Umbrella.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AJ_Computer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\BigRedSmile_A_Mobile_Phone.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\jean_victor_balin_book.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\johnny_automatic_eyeglasses_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\johnny_automatic_key.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\johnny_automatic_purse_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\Muga_Golden_Credit_Card.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\n_kamil_Money_-_banknotes_and_coin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\rg1024_Set_of_water_drops.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\TheresaKnott_handbag.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\tim99_Simple_Telephone.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\valessiobrito_Clock_Alarm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\webmichl_wristwatch_1_-_chronometer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\wipp_Address_Book.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\yves_guillou_glasses.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wsnaccad_LEATHER_WALLET.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\itomato_Technical_Drawing_Pencil.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\zeimusu_Pen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\szymonraj_Shopping_bag.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

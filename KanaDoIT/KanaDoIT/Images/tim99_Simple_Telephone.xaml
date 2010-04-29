@@ -1,0 +1,43 @@
+<!-- Exported with ViewerSvg and Ab2d.ReaderSvg. See www.wpf-graphics.com for more WPF tools. -->
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="200" Height="193">
+    <Canvas.RenderTransform>
+        <ScaleTransform ScaleX="6.87619144508285" ScaleY="6.78981519341671"/>
+    </Canvas.RenderTransform>
+    <Canvas Canvas.Left="0.0304211378097534">
+        <Canvas Name="layer1" Canvas.Left="-1.00392460823059" Canvas.Top="-2.9676148891449">
+            <Path Name="path3509" Fill="Gray" StrokeThickness="1" Data="M2.3665358,17.532875L13.038273,22.176643 13,27.624141 10.225221,27.668793 1.4735035,22.757115 1.4735035,18.024043 2.3665358,17.532875z"/>
+            <Rectangle Name="rect2693" Fill="Black" Stroke="White" StrokeThickness="1" Width="1" Height="1.26790971" Canvas.Left="9.1894016" Canvas.Top="29.624632"/>
+            <Path Name="path3519" StrokeThickness="1" Data="M12.725712,22.444553L22.415113,13.782139 22.504417,17.800785 24.469088,19.542198 26.344456,20.078017 13.975957,27.400883 12.94897,27.713445 13,22.444553 12.725712,22.444553z">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="12.725712,20.680815" EndPoint="26.344456,20.680815" MappingMode="Absolute" SpreadMethod="Pad">
+                        <GradientStop Color="#FF8BA2E6" Offset="0"/>
+                        <GradientStop Color="#FF2A2982" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Name="path3529" Fill="Gray" StrokeThickness="1" Data="M8.573111,11.3263L6.5191365,9.4509319 6.6530914,6.1913636 9.4214918,3.4676148 13.752699,3.7801761 14.913641,4.4946021 8.573111,11.3263z"/>
+            <Path Name="path3539" StrokeThickness="1" Data="M22.549068,13.692836L22.549068,17.756133 24.826301,19.810108 27.28214,19.542198 29.470069,17.577527 29.425418,11.192345 22.549068,13.692836z">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="22.549068,15.501226" EndPoint="29.47007,13.469577" MappingMode="Absolute" SpreadMethod="Pad">
+                        <GradientStop Color="#FF626993" Offset="0"/>
+                        <GradientStop Color="#FFD5E4E5" Offset="0.5"/>
+                        <GradientStop Color="#FF626993" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Name="path3549" StrokeThickness="1" Data="M11.02895,8.4239447L15,4.271344 29.559372,11.192345 22.638372,13.871442 11.02895,8.4239447z">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="15.895976,13.692836" EndPoint="20.40579,4.3159957" MappingMode="Absolute" SpreadMethod="Pad">
+                        <GradientStop Color="#FF626993" Offset="0"/>
+                        <GradientStop Color="#FFD5E4E5" Offset="0.5"/>
+                        <GradientStop Color="#FF626993" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Name="path2689" Stroke="Black" StrokeThickness="1" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeLineJoin="Round" StrokeMiterLimit="4" Data="M26.553484,20.178607L13.425908,27.57949 10.344946,27.57949 1.5039246,22.712463 1.5039246,18.202649 11.371933,8.6918543 22.445535,13.737488 22.534838,17.756134 24.633464,19.676153 26.508833,20.167321 29.411188,17.577527 29.500491,11.236997 13.381256,3.556918 9.3179581,3.4676148 6.504906,6.5039249 6.6835125,9.9420999 8.3356224,11.3263"/>
+            <Path Name="path3561" Stroke="Black" StrokeThickness="1" StrokeLineJoin="Round" StrokeMiterLimit="4" Data="M6.2065752,17.041708L11.162905,11.906771 17.235525,14.853778 12.41315,19.944063 6.2065752,17.041708z"/>
+            <Path Name="path3563" Stroke="Black" StrokeThickness="1" StrokeMiterLimit="4" Data="M8.2605497,17.711482L13.127577,12.755152"/>
+            <Path Name="path3565" Stroke="Black" StrokeThickness="1" StrokeMiterLimit="4" Data="M10.403827,18.827772L15.181551,13.737487"/>
+        </Canvas>
+    </Canvas>
+</Canvas>
