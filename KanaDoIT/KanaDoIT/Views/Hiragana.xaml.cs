@@ -11,7 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
 
-namespace KanaDoIT.Views
+namespace Arbaureal.KanaDoIT.Views
 {
     public partial class Hiragana : Page
     {

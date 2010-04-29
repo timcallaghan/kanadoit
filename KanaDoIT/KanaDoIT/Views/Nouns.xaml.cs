@@ -13,7 +13,7 @@ using System.Windows.Navigation;
 using System.IO;
 using System.Windows.Markup;
 
-namespace KanaDoIT.Views
+namespace Arbaureal.KanaDoIT.Views
 {
     public partial class Nouns : Page
     {

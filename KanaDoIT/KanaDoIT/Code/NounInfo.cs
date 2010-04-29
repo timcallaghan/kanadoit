@@ -4,7 +4,7 @@ using System.Windows.Media;
 using System.Windows.Controls;
 using System.Windows.Documents;
 
-namespace KanaDoIT
+namespace Arbaureal.KanaDoIT
 {
     public class KanaCharInfo
     {

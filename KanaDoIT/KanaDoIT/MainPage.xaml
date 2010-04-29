@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="KanaDoIT.MainPage"
+    x:Class="Arbaureal.KanaDoIT.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
@@ -56,7 +56,12 @@
                                      NavigateUri="/Nouns" TargetName="ContentFrame" Content="Nouns"/>
 
                     <Rectangle x:Name="Divider4" Style="{StaticResource DividerStyle}"/>
-					
+
+                    <HyperlinkButton x:Name="TimeLink" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/Time" TargetName="ContentFrame" Content="Time"/>
+
+                    <Rectangle x:Name="Divider5" Style="{StaticResource DividerStyle}"/>
+
                     <HyperlinkButton x:Name="Link2" Style="{StaticResource LinkStyle}" 
                                      NavigateUri="/About" TargetName="ContentFrame" Content="about"/>
 

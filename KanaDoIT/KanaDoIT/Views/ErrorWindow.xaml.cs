@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace KanaDoIT
+namespace Arbaureal.KanaDoIT
 {
     public partial class ErrorWindow : ChildWindow
     {
