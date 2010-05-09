@@ -57,11 +57,20 @@
   <ItemGroup>
     <Compile Include="KanaboardObjects\KanaboardEventArgs.cs" />
     <Compile Include="KanaboardObjects\Model\IKanaboardModel.cs" />
+    <Compile Include="KanaboardObjects\Model\Kanaboard.cs" />
+    <Compile Include="KanaboardObjects\Model\KanaboardBase.cs" />
+    <Compile Include="KanaboardObjects\Presenter\KanaboardPresenter.cs" />
+    <Compile Include="KanaboardObjects\View\IKanaboardView.cs" />
+    <Compile Include="KanaboardObjects\View\Kanaboard.xaml.cs">
+      <DependentUpon>Kanaboard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="KanaboardObjects\Presenter\" />
-    <Folder Include="KanaboardObjects\View\" />
+    <Page Include="KanaboardObjects\View\Kanaboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseResources\BaseResources.csproj">

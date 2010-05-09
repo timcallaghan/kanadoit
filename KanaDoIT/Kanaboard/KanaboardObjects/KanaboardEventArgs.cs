@@ -9,19 +9,35 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
+using Arbaureal.KanaDoIT.BaseResources;
+
 namespace Arbaureal.KanaDoIT.Kanaboard.KanaboardObjects
 {
-    public class KanaboardEventArgs : EventArgs
+    public class KanaboardKeyPressedEventArgs : EventArgs
     {
-        //public KanaboardEventArgs(ClockData clockData)
-        //{
-        //    this.ClockData = clockData;
-        //}
+        public KanaboardKeyPressedEventArgs(KanaKey key)
+        {
+            this.KanaKey = key;
+        }
 
-        //public ClockData ClockData
-        //{
-        //    get;
-        //    protected set;
-        //}
+        public KanaKey KanaKey
+        {
+            get;
+            protected set;
+        }
+    }
+
+    public class KanaboardKanaTypeChangedEventArgs : EventArgs
+    {
+        public KanaboardKanaTypeChangedEventArgs(KanaType type)
+        {
+            this.KanaType = type;
+        }
+
+        public KanaType KanaType
+        {
+            get;
+            protected set;
+        }
     }
 }

@@ -37,7 +37,9 @@ namespace Arbaureal.KanaDoIT.BaseResources
         WA,             WO,
         N,
         DOUBLE,
-        LONG
+        LONG,
+        A_SMALL, I_SMALL, U_SMALL, E_SMALL, O_SMALL,
+        COMMA, FULLSTOP
     }
 
     public enum KanaType
@@ -191,8 +193,14 @@ namespace Arbaureal.KanaDoIT.BaseResources
             this.Add(KanaKey.N, new KanaInfo("m", "n", "n.mp3"));
 
             this.Add(KanaKey.DOUBLE, new KanaInfo("+", "", ""));
-
             this.Add(KanaKey.LONG, new KanaInfo("_", "", ""));
+            this.Add(KanaKey.A_SMALL, new KanaInfo("Y", "a", ""));
+            this.Add(KanaKey.I_SMALL, new KanaInfo("M", "i", ""));
+            this.Add(KanaKey.U_SMALL, new KanaInfo("|", "u", ""));
+            this.Add(KanaKey.E_SMALL, new KanaInfo("U", "e", ""));
+            this.Add(KanaKey.O_SMALL, new KanaInfo("N", "o", ""));
+            this.Add(KanaKey.COMMA, new KanaInfo("I", ",", ""));
+            this.Add(KanaKey.FULLSTOP, new KanaInfo("O", ".", ""));
         }
     }
 }

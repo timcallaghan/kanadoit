@@ -11,15 +11,11 @@ using System.Windows.Shapes;
 
 using Arbaureal.KanaDoIT.BaseResources;
 
-namespace Arbaureal.KanaDoIT.Kanaboard.KanaboardObjects.Model
+namespace Arbaureal.KanaDoIT.Kanaboard.KanaboardObjects.View
 {
-    public interface IKanaboardModel
+    public interface IKanaboardView
     {
+        void KanaTypeChanged(KanaType type);
         event EventHandler<KanaboardKeyPressedEventArgs> KeyPressed;
-        event EventHandler<KanaboardKanaTypeChangedEventArgs> KanaTypeChanged;
-
-        KanaType KanaType { get; set; }
-
-        void PressKey(KanaKey key);
     }
 }

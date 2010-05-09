@@ -167,6 +167,10 @@
       <Project>{31EB0DB1-15D9-4B87-A489-1404521F4821}</Project>
       <Name>Clock</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Kanaboard\Kanaboard.csproj">
+      <Project>{5CBA5A2B-A751-4AED-B13D-1E32F2691000}</Project>
+      <Name>Kanaboard</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Code\" />

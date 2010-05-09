@@ -13,13 +13,16 @@ using Arbaureal.KanaDoIT.BaseResources;
 
 namespace Arbaureal.KanaDoIT.Kanaboard.KanaboardObjects.Model
 {
-    public interface IKanaboardModel
+    public class Kanaboard : KanaboardBase
     {
-        event EventHandler<KanaboardKeyPressedEventArgs> KeyPressed;
-        event EventHandler<KanaboardKanaTypeChangedEventArgs> KanaTypeChanged;
+        public static IKanaboardModel Create(KanaType type)
+        {
+            return new Kanaboard(type);
+        }
 
-        KanaType KanaType { get; set; }
-
-        void PressKey(KanaKey key);
+        private Kanaboard(KanaType type)
+            : base(type)
+        {
+        }
     }
 }
