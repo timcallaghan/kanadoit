@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A9A2A51-FD16-4325-8D2D-5084111D92E2}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Arbaureal.KanaDoIT.BaseResources</RootNamespace>
+    <AssemblyName>BaseResources</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\ChimeGenerator.cs" />
+    <Compile Include="Code\KanaInfo.cs" />
+    <Compile Include="Code\NounInfo.cs" />
+    <Compile Include="Code\SoundBufferArray.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\a.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fonts\PJ_Hiragana.ttf" />
+    <Resource Include="Fonts\PJ_Katakana.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AJ_Computer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BigRedSmile_A_Mobile_Phone.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\itomato_Technical_Drawing_Pencil.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\jean_victor_balin_book.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\johnny_automatic_eyeglasses_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\johnny_automatic_key.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\johnny_automatic_purse_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LX_Black_Umbrella.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Muga_Golden_Credit_Card.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\n_kamil_Money_-_banknotes_and_coin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rg1024_Set_of_water_drops.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\szymonraj_Shopping_bag.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TheresaKnott_handbag.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tim99_Simple_Telephone.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\valessiobrito_Clock_Alarm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\webmichl_wristwatch_1_-_chronometer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wipp_Address_Book.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wsnaccad_LEATHER_WALLET.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\yves_guillou_glasses.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\zeimusu_Pen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_Ab1.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_Ab2.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_C2.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_C3.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_Db2.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_Db3.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_F1.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_F2.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_F3.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_G1.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Music\Chime_G2.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\aa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ba.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\be.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\bi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\bo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\bu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\bya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\byo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\byu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\cha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\chi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\cho.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\chu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\da.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\de.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\do.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\e.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ee.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\fu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ga.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ge.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\gi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\go.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\gu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\gya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\gyo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\gyu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\he.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\hi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ho.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\hya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\hyo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\hyu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\i.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ii.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ja_jya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ji_d.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ji_z.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\jo_jyo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ju_jyu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ka.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ke.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ki.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\kippu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\kitte.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ko.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ku.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\kya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\kyo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\kyu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ma.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\me.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\mi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\mo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\mu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\mya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\myo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\myu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\n.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\na.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ne.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ni.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\no.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\nu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\nya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\nyo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\nyu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\o.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\o_w.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\oo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\pa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\pe.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\pi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\po.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\pu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\pya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\pyo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\pyu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ra.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\re.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ri.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ro.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ru.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\rya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ryo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ryu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\sa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\se.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\sha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\shi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\sho.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\shu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\so.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\su.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ta.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\te.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\to.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\tsu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\u.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\uu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\wa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ya.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\yo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\yu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\za.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\ze.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\zo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\zu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\zu_d.mp3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
