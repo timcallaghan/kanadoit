@@ -9,7 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-namespace Arbaureal.Clock.ClockObjects
+namespace Arbaureal.KanaDoIT.Clock.ClockObjects
 {
     public class ClockData
     {

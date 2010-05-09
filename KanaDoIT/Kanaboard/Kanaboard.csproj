@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{31EB0DB1-15D9-4B87-A489-1404521F4821}</ProjectGuid>
+    <ProjectGuid>{5CBA5A2B-A751-4AED-B13D-1E32F2691000}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Arbaureal.KanaDoIT.Clock</RootNamespace>
-    <AssemblyName>Clock</AssemblyName>
+    <RootNamespace>Arbaureal.KanaDoIT.Kanaboard</RootNamespace>
+    <AssemblyName>Kanaboard</AssemblyName>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
@@ -55,25 +55,20 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClockObjects\ClockData.cs" />
-    <Compile Include="ClockObjects\ClockDataEventArgs.cs" />
-    <Compile Include="ClockObjects\ClockModel\Clock.cs" />
-    <Compile Include="ClockObjects\ClockModel\ClockBase.cs" />
-    <Compile Include="ClockObjects\ClockModel\IClockModel.cs" />
-    <Compile Include="ClockObjects\ClockPresenter\ClockPresenter.cs" />
-    <Compile Include="ClockObjects\ClockView\Clock.xaml.cs">
-      <DependentUpon>Clock.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ClockObjects\ClockView\IClockView.cs" />
+    <Compile Include="KanaboardObjects\KanaboardEventArgs.cs" />
+    <Compile Include="KanaboardObjects\Model\IKanaboardModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="ClockObjects\ClockView\Clock.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Folder Include="KanaboardObjects\Presenter\" />
+    <Folder Include="KanaboardObjects\View\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BaseResources\BaseResources.csproj">
+      <Project>{9A9A2A51-FD16-4325-8D2D-5084111D92E2}</Project>
+      <Name>BaseResources</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

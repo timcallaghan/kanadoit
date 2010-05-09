@@ -10,7 +10,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace Arbaureal.Clock.ClockObjects.ClockModel
+namespace Arbaureal.KanaDoIT.Clock.ClockObjects.ClockModel
 {
     public abstract class ClockBase : IClockModel
     {

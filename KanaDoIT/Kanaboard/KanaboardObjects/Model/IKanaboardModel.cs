@@ -9,14 +9,12 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-namespace Arbaureal.KanaDoIT.Clock.ClockObjects.ClockView
-{
-    public interface IClockView
-    {
-        void Update(ClockData clockData);
+using Arbaureal.KanaDoIT.BaseResources;
 
-        event EventHandler StartClock;
-        event EventHandler StopClock;
-        event EventHandler SplitTime;
+namespace Arbaureal.KanaDoIT.Kanaboard.KanaboardObjects.Model
+{
+    public interface IKanaboardModel
+    {
+        KanaType KanaType { get; set; }
     }
 }

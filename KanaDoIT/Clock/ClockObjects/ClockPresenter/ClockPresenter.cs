@@ -9,10 +9,10 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-using Arbaureal.Clock.ClockObjects.ClockView;
-using Arbaureal.Clock.ClockObjects.ClockModel;
+using Arbaureal.KanaDoIT.Clock.ClockObjects.ClockView;
+using Arbaureal.KanaDoIT.Clock.ClockObjects.ClockModel;
 
-namespace Arbaureal.Clock.ClockObjects.ClockPresenter
+namespace Arbaureal.KanaDoIT.Clock.ClockObjects.ClockPresenter
 {
     public delegate void Callback(ClockData clockData);
 
