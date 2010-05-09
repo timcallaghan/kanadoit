@@ -11,9 +11,9 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
 
-using Arbaureal.Clock.ClockObjects;
-using Arbaureal.Clock.ClockObjects.ClockModel;
-using Arbaureal.Clock.ClockObjects.ClockPresenter;
+using Arbaureal.KanaDoIT.Clock.ClockObjects;
+using Arbaureal.KanaDoIT.Clock.ClockObjects.ClockModel;
+using Arbaureal.KanaDoIT.Clock.ClockObjects.ClockPresenter;
 
 
 namespace Arbaureal.KanaDoIT.Views
@@ -26,7 +26,7 @@ namespace Arbaureal.KanaDoIT.Views
         {
             InitializeComponent();
 
-            clockModel = Arbaureal.Clock.ClockObjects.ClockModel.Clock.Create();
+            clockModel = Arbaureal.KanaDoIT.Clock.ClockObjects.ClockModel.Clock.Create();
             clockModel.ClockData = new ClockData().Update(DateTime.Now);
             ClockPresenter presenter = new ClockPresenter(this.AnalogClockControl, clockModel);
 
@@ -38,6 +38,16 @@ namespace Arbaureal.KanaDoIT.Views
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+        }
+
+        private void btnNewTime_Click(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            int hours = rand.Next(24);
+            int minutes = rand.Next(12)*5;
+            int seconds = minutes;
+
+            clockModel.ClockData = new ClockData().Update(new TimeSpan(0, hours, minutes, seconds, 0));
         }
 
     }

@@ -79,8 +79,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Code\KanaInfo.cs" />
-    <Compile Include="Code\NounInfo.cs" />
     <Compile Include="Views\ErrorWindow.xaml.cs">
       <DependentUpon>ErrorWindow.xaml</DependentUpon>
     </Compile>
@@ -134,122 +132,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Fonts\PJ_Hiragana.ttf" />
-    <Resource Include="Fonts\PJ_Katakana.ttf" />
     <None Include="Properties\AppManifest.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\a.mp3" />
-    <Resource Include="Sounds\aa.mp3" />
-    <Resource Include="Sounds\ba.mp3" />
-    <Resource Include="Sounds\be.mp3" />
-    <Resource Include="Sounds\bi.mp3" />
-    <Resource Include="Sounds\bo.mp3" />
-    <Resource Include="Sounds\bu.mp3" />
-    <Resource Include="Sounds\bya.mp3" />
-    <Resource Include="Sounds\byo.mp3" />
-    <Resource Include="Sounds\byu.mp3" />
-    <Resource Include="Sounds\cha.mp3" />
-    <Resource Include="Sounds\chi.mp3" />
-    <Resource Include="Sounds\cho.mp3" />
-    <Resource Include="Sounds\chu.mp3" />
-    <Resource Include="Sounds\da.mp3" />
-    <Resource Include="Sounds\de.mp3" />
-    <Resource Include="Sounds\do.mp3" />
-    <Resource Include="Sounds\e.mp3" />
-    <Resource Include="Sounds\ee.mp3" />
-    <Resource Include="Sounds\fu.mp3" />
-    <Resource Include="Sounds\ga.mp3" />
-    <Resource Include="Sounds\ge.mp3" />
-    <Resource Include="Sounds\gi.mp3" />
-    <Resource Include="Sounds\go.mp3" />
-    <Resource Include="Sounds\gu.mp3" />
-    <Resource Include="Sounds\gya.mp3" />
-    <Resource Include="Sounds\gyo.mp3" />
-    <Resource Include="Sounds\gyu.mp3" />
-    <Resource Include="Sounds\ha.mp3" />
-    <Resource Include="Sounds\he.mp3" />
-    <Resource Include="Sounds\hi.mp3" />
-    <Resource Include="Sounds\ho.mp3" />
-    <Resource Include="Sounds\hya.mp3" />
-    <Resource Include="Sounds\hyo.mp3" />
-    <Resource Include="Sounds\hyu.mp3" />
-    <Resource Include="Sounds\i.mp3" />
-    <Resource Include="Sounds\ii.mp3" />
-    <Resource Include="Sounds\ja_jya.mp3" />
-    <Resource Include="Sounds\ji_d.mp3" />
-    <Resource Include="Sounds\ji_z.mp3" />
-    <Resource Include="Sounds\jo_jyo.mp3" />
-    <Resource Include="Sounds\ju_jyu.mp3" />
-    <Resource Include="Sounds\ka.mp3" />
-    <Resource Include="Sounds\ke.mp3" />
-    <Resource Include="Sounds\ki.mp3" />
-    <Resource Include="Sounds\kippu.mp3" />
-    <Resource Include="Sounds\kitte.mp3" />
-    <Resource Include="Sounds\ko.mp3" />
-    <Resource Include="Sounds\ku.mp3" />
-    <Resource Include="Sounds\kya.mp3" />
-    <Resource Include="Sounds\kyo.mp3" />
-    <Resource Include="Sounds\kyu.mp3" />
-    <Resource Include="Sounds\ma.mp3" />
-    <Resource Include="Sounds\me.mp3" />
-    <Resource Include="Sounds\mi.mp3" />
-    <Resource Include="Sounds\mo.mp3" />
-    <Resource Include="Sounds\mu.mp3" />
-    <Resource Include="Sounds\mya.mp3" />
-    <Resource Include="Sounds\myo.mp3" />
-    <Resource Include="Sounds\myu.mp3" />
-    <Resource Include="Sounds\n.mp3" />
-    <Resource Include="Sounds\na.mp3" />
-    <Resource Include="Sounds\ne.mp3" />
-    <Resource Include="Sounds\ni.mp3" />
-    <Resource Include="Sounds\no.mp3" />
-    <Resource Include="Sounds\nu.mp3" />
-    <Resource Include="Sounds\nya.mp3" />
-    <Resource Include="Sounds\nyo.mp3" />
-    <Resource Include="Sounds\nyu.mp3" />
-    <Resource Include="Sounds\o.mp3" />
-    <Resource Include="Sounds\oo.mp3" />
-    <Resource Include="Sounds\o_w.mp3" />
-    <Resource Include="Sounds\pa.mp3" />
-    <Resource Include="Sounds\pe.mp3" />
-    <Resource Include="Sounds\pi.mp3" />
-    <Resource Include="Sounds\po.mp3" />
-    <Resource Include="Sounds\pu.mp3" />
-    <Resource Include="Sounds\pya.mp3" />
-    <Resource Include="Sounds\pyo.mp3" />
-    <Resource Include="Sounds\pyu.mp3" />
-    <Resource Include="Sounds\ra.mp3" />
-    <Resource Include="Sounds\re.mp3" />
-    <Resource Include="Sounds\ri.mp3" />
-    <Resource Include="Sounds\ro.mp3" />
-    <Resource Include="Sounds\ru.mp3" />
-    <Resource Include="Sounds\rya.mp3" />
-    <Resource Include="Sounds\ryo.mp3" />
-    <Resource Include="Sounds\ryu.mp3" />
-    <Resource Include="Sounds\sa.mp3" />
-    <Resource Include="Sounds\se.mp3" />
-    <Resource Include="Sounds\sha.mp3" />
-    <Resource Include="Sounds\shi.mp3" />
-    <Resource Include="Sounds\sho.mp3" />
-    <Resource Include="Sounds\shu.mp3" />
-    <Resource Include="Sounds\so.mp3" />
-    <Resource Include="Sounds\su.mp3" />
-    <Resource Include="Sounds\ta.mp3" />
-    <Resource Include="Sounds\te.mp3" />
-    <Resource Include="Sounds\to.mp3" />
-    <Resource Include="Sounds\tsu.mp3" />
-    <Resource Include="Sounds\u.mp3" />
-    <Resource Include="Sounds\uu.mp3" />
-    <Resource Include="Sounds\wa.mp3" />
-    <Resource Include="Sounds\ya.mp3" />
-    <Resource Include="Sounds\yo.mp3" />
-    <Resource Include="Sounds\yu.mp3" />
-    <Resource Include="Sounds\za.mp3" />
-    <Resource Include="Sounds\ze.mp3" />
-    <Resource Include="Sounds\zo.mp3" />
-    <Resource Include="Sounds\zu.mp3" />
-    <Resource Include="Sounds\zu_d.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\Katakana.xaml">
@@ -270,108 +153,23 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\LX_Black_Umbrella.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\AJ_Computer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\BigRedSmile_A_Mobile_Phone.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\jean_victor_balin_book.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\johnny_automatic_eyeglasses_1.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\johnny_automatic_key.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\johnny_automatic_purse_1.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\Muga_Golden_Credit_Card.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\n_kamil_Money_-_banknotes_and_coin.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\rg1024_Set_of_water_drops.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\TheresaKnott_handbag.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\tim99_Simple_Telephone.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\valessiobrito_Clock_Alarm.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\webmichl_wristwatch_1_-_chronometer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\wipp_Address_Book.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Images\yves_guillou_glasses.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\wsnaccad_LEATHER_WALLET.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\itomato_Technical_Drawing_Pencil.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\zeimusu_Pen.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\szymonraj_Shopping_bag.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="Views\Time.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaseResources\BaseResources.csproj">
+      <Project>{9A9A2A51-FD16-4325-8D2D-5084111D92E2}</Project>
+      <Name>BaseResources</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Clock\Clock.csproj">
       <Project>{31EB0DB1-15D9-4B87-A489-1404521F4821}</Project>
       <Name>Clock</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Code\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

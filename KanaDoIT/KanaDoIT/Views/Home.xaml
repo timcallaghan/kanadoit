@@ -8,13 +8,30 @@
     Style="{StaticResource PageStyle}">
 
     <Grid x:Name="LayoutRoot">
-        <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}">
+        <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}" VerticalAlignment="Center">
 
             <StackPanel x:Name="ContentStackPanel" HorizontalAlignment="Center">
+                <HyperlinkButton x:Name="Link1" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/Home" TargetName="ContentFrame" Content="Home" MouseEnter="Link_MouseEnter"/>
 
+                <HyperlinkButton x:Name="HiraganLink" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/Hiragana" TargetName="ContentFrame" Content="Hiragana" MouseEnter="Link_MouseEnter"/>
+
+                <HyperlinkButton x:Name="KatakanaLink" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/Katakana" TargetName="ContentFrame" Content="Katakana" MouseEnter="Link_MouseEnter"/>
+
+                <HyperlinkButton x:Name="NounsLink" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/Nouns" TargetName="ContentFrame" Content="Nouns" MouseEnter="Link_MouseEnter"/>
+
+                <HyperlinkButton x:Name="TimeLink" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/Time" TargetName="ContentFrame" Content="Time" MouseEnter="Link_MouseEnter"/>
+
+                <HyperlinkButton x:Name="Link2" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/About" TargetName="ContentFrame" Content="About" MouseEnter="Link_MouseEnter"/>
             </StackPanel>
-
         </ScrollViewer>
+        
+        <MediaElement x:Name="meMusic" AutoPlay="True" />
     </Grid>
 
 </navigation:Page>

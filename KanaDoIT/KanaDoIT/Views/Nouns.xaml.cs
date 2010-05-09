@@ -13,28 +13,30 @@ using System.Windows.Navigation;
 using System.IO;
 using System.Windows.Markup;
 
+using Arbaureal.KanaDoIT.BaseResources;
+
 namespace Arbaureal.KanaDoIT.Views
 {
     public partial class Nouns : Page
     {
-        private DictionaryNouns dictNouns;
+        private BaseResources.DictionaryNouns dictNouns;
         private Random random;
         private int nCurrentKey;
 
-        private List<NounInfo> listChoices;
+        private List<BaseResources.NounInfo> listChoices;
 
         public Nouns()
         {
             InitializeComponent();
 
-            listChoices = new List<NounInfo>();
+            listChoices = new List<BaseResources.NounInfo>();
             random = new Random();
         }
 
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            dictNouns = new DictionaryNouns();
+            dictNouns = new BaseResources.DictionaryNouns();
 
             listChoices = dictNouns.GetRandonNounList();
 

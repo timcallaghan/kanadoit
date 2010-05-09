@@ -11,13 +11,15 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
 
+using Arbaureal.KanaDoIT.BaseResources;
+
 namespace Arbaureal.KanaDoIT.Views
 {
     public partial class Hiragana : Page
     {
         private Random random;
-        private DictionaryKanaInfo dictKana;
-        private KanaKey currentKanaKey;
+        private BaseResources.DictionaryKanaInfo dictKana;
+        private BaseResources.KanaKey currentKanaKey;
 
         public Hiragana()
         {
@@ -29,12 +31,12 @@ namespace Arbaureal.KanaDoIT.Views
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            dictKana = new DictionaryKanaInfo();
+            dictKana = new BaseResources.DictionaryKanaInfo();
 
-            kanaPlaceholder.FontFamily = DictionaryKanaInfo.HiraganaFont;
+            kanaPlaceholder.FontFamily = BaseResources.DictionaryKanaInfo.HiraganaFont;
             kanaPlaceholder.FontSize = 200;
 
-            currentKanaKey = KanaKey.A;
+            currentKanaKey = BaseResources.KanaKey.A;
 
             kanaPlaceholder.Text = dictKana[currentKanaKey].FontCode;
             romajiPlaceholder.Text = dictKana[currentKanaKey].Romaji;
@@ -43,7 +45,7 @@ namespace Arbaureal.KanaDoIT.Views
 
         private void btnCycle_Click(object sender, RoutedEventArgs e)
         {
-            currentKanaKey = (KanaKey)random.Next((int)KanaKey.N + 1);
+            currentKanaKey = (BaseResources.KanaKey)random.Next((int)BaseResources.KanaKey.N + 1);
 
             kanaPlaceholder.Text = dictKana[currentKanaKey].FontCode;
             romajiPlaceholder.Text = dictKana[currentKanaKey].Romaji;
