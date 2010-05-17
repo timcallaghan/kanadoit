@@ -11,6 +11,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Arbaureal.KanaDoIT.Views;
+
 namespace Arbaureal.KanaDoIT
 {
     public partial class MainPage : UserControl
@@ -23,19 +25,71 @@ namespace Arbaureal.KanaDoIT
         // After the Frame navigates, ensure the HyperlinkButton representing the current page is selected
         private void ContentFrame_Navigated(object sender, NavigationEventArgs e)
         {
-            foreach (UIElement child in LinksStackPanel.Children)
+            if (e.Content != null)
             {
-                HyperlinkButton hb = child as HyperlinkButton;
-                if (hb != null && hb.NavigateUri != null)
+                foreach (UIElement child in LinksStackPanel.Children)
                 {
-                    if (hb.NavigateUri.ToString().Equals(e.Uri.ToString()))
+                    HyperlinkButton hb = child as HyperlinkButton;
+                    if (hb != null && hb.NavigateUri != null)
                     {
-                        VisualStateManager.GoToState(hb, "ActiveLink", true);
+                        if (hb.NavigateUri.ToString().Equals(e.Uri.ToString()))
+                        {
+                            VisualStateManager.GoToState(hb, "ActiveLink", true);
+                        }
+                        else
+                        {
+                            VisualStateManager.GoToState(hb, "InactiveLink", true);
+                        }
                     }
-                    else
+                }
+
+                if (e.Content is ILearningArea)
+                {
+                    ILearningArea learningArea = e.Content as ILearningArea;
+                    LinearGradientBrush gb = new LinearGradientBrush();
+                    GradientStop start = new GradientStop();
+                    start.Color = Colors.White;
+                    start.Offset = 0.0;
+                    GradientStop end = new GradientStop();
+                    end.Color = learningArea.MenuColour;
+                    end.Offset = 0.5;
+                    gb.GradientStops.Add(start);
+                    gb.GradientStops.Add(end);
+                    gb.StartPoint = new Point(0.5, 0.0);
+                    gb.EndPoint = new Point(0.5, 1.0);
+                    OuterContentBorder.Background = gb;
+                    SubMenuColDef.Width = new GridLength(200);
+
+                    TopicMenu.Children.Clear();
+                    List<Topic> listTopics = learningArea.GetListOfTopics();
+                    foreach (Topic topic in listTopics)
                     {
-                        VisualStateManager.GoToState(hb, "InactiveLink", true);
+                        HyperlinkButton hlButton = new HyperlinkButton();
+                        hlButton.NavigateUri = new Uri(topic.NavigateUri, UriKind.Relative);
+                        hlButton.TargetName = "ContentFrame";
+                        hlButton.Content = topic.Name;
+                        //hlButton.Style = (Style)Application.Current.Resources["LinkStyle"];
+                        LinearGradientBrush hlgb = new LinearGradientBrush();
+                        GradientStop hlstart = new GradientStop();
+                        hlstart.Color = Colors.White;
+                        hlstart.Offset = 0.0;
+                        GradientStop hlend = new GradientStop();
+                        hlend.Color = learningArea.MenuColour;
+                        hlend.Offset = 1.0;
+                        hlgb.GradientStops.Add(hlstart);
+                        hlgb.GradientStops.Add(hlend);
+                        hlgb.StartPoint = new Point(0.5, 0.0);
+                        hlgb.EndPoint = new Point(0.5, 1.0);
+                        hlButton.Background = hlgb;
+                        hlButton.FontSize = 16;
+                        hlButton.Foreground = new SolidColorBrush(Colors.Black);
+                        TopicMenu.Children.Add(hlButton);
                     }
+                }
+                else
+                {
+                    OuterContentBorder.Background = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+                    SubMenuColDef.Width = new GridLength(0);
                 }
             }
         }

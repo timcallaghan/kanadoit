@@ -51,7 +51,7 @@
         </Style>
     </UserControl.Resources>
     
-    <Grid x:Name="LayoutRoot" Background="White">        
+    <Grid x:Name="LayoutRoot" Background="Transparent">        
         <Grid x:Name="ClockFaceGrid" Width="250" Height="250">
             <Ellipse StrokeThickness="5" Stretch="Fill">
                 <Ellipse.Fill>

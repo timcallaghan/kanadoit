@@ -16,9 +16,9 @@ using Arbaureal.KanaDoIT.Clock.ClockObjects.ClockModel;
 using Arbaureal.KanaDoIT.Clock.ClockObjects.ClockPresenter;
 
 
-namespace Arbaureal.KanaDoIT.Views
+namespace Arbaureal.KanaDoIT.Views.Time
 {
-    public partial class Time : Page
+    public partial class Time : TimeBaseView
     {
         private IClockModel clockModel;
 

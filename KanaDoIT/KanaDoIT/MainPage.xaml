@@ -4,25 +4,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
     xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
 
     <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
-
-        <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}">
-
-            <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
-                              Source="/Home" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed">
-                <navigation:Frame.UriMapper>
-                  <uriMapper:UriMapper>
-                    <uriMapper:UriMapping Uri="" MappedUri="/Views/Home.xaml"/>
-                    <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/Views/{pageName}.xaml"/>
-                  </uriMapper:UriMapper>
-                </navigation:Frame.UriMapper>
-            </navigation:Frame>
-        </Border>
-
-        <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="SubMenuColDef" Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
 
             <Border x:Name="BrandingBorder" Style="{StaticResource BrandingBorderStyle}">
                 <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
@@ -43,22 +39,22 @@
                     <Rectangle x:Name="Divider1" Style="{StaticResource DividerStyle}"/>
 
                     <HyperlinkButton x:Name="HiraganLink" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/Hiragana" TargetName="ContentFrame" Content="Hiragana"/>
+                                     NavigateUri="/Hiragana/Introduction" TargetName="ContentFrame" Content="Hiragana"/>
 
                     <Rectangle x:Name="Divider2" Style="{StaticResource DividerStyle}"/>
 
                     <HyperlinkButton x:Name="KatakanaLink" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/Katakana" TargetName="ContentFrame" Content="Katakana"/>
+                                     NavigateUri="/Katakana/Introduction" TargetName="ContentFrame" Content="Katakana"/>
 
                     <Rectangle x:Name="Divider3" Style="{StaticResource DividerStyle}"/>
 
                     <HyperlinkButton x:Name="NounsLink" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/Nouns" TargetName="ContentFrame" Content="Nouns"/>
+                                     NavigateUri="/Nouns/Nouns" TargetName="ContentFrame" Content="Nouns"/>
 
                     <Rectangle x:Name="Divider4" Style="{StaticResource DividerStyle}"/>
 
                     <HyperlinkButton x:Name="TimeLink" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/Time" TargetName="ContentFrame" Content="Time"/>
+                                     NavigateUri="/Time/Time" TargetName="ContentFrame" Content="Time"/>
 
                     <Rectangle x:Name="Divider5" Style="{StaticResource DividerStyle}"/>
 
@@ -69,6 +65,29 @@
             </Border>
 
         </Grid>
+        
+        <StackPanel x:Name="TopicMenu" Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+            
+        </StackPanel>
+
+        <Border x:Name="OuterContentBorder" Grid.Row="1" Grid.Column="1" Style="{StaticResource OutterContentBorderStyle}">
+
+            <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}">
+
+                <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
+                                  Source="/Home" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed">
+                    <navigation:Frame.UriMapper>
+                      <uriMapper:UriMapper>
+                        <uriMapper:UriMapping Uri="" MappedUri="/Views/Home.xaml"/>
+                        <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/Views/{pageName}.xaml"/>
+                        <uriMapper:UriMapping Uri="/{RootFolder}/{pageName}" MappedUri="/Views/{RootFolder}/{pageName}.xaml"/>
+                      </uriMapper:UriMapper>
+                    </navigation:Frame.UriMapper>
+                </navigation:Frame>
+            </Border>
+        </Border>
+
+        
 
     </Grid>
 

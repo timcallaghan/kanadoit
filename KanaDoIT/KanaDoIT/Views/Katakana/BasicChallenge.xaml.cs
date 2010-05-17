@@ -8,17 +8,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Arbaureal.KanaDoIT.BaseResources;
+using System.Windows.Navigation;
 
-namespace Arbaureal.KanaDoIT
+namespace Arbaureal.KanaDoIT.Views.Katakana
 {
-    public partial class Home : Page
+    public partial class BasicChallenge : KatakanaBaseView
     {
-        private BaseResources.ChimeGenerator chimeGenerator;
-
-        public Home()
+        public BasicChallenge()
         {
             InitializeComponent();
         }
@@ -26,12 +23,7 @@ namespace Arbaureal.KanaDoIT
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            chimeGenerator = new BaseResources.ChimeGenerator(LayoutRoot);
         }
 
-        private void Link_MouseEnter(object sender, MouseEventArgs e)
-        {
-            chimeGenerator.PlayRandomChime();
-        }
     }
 }

@@ -11,17 +11,15 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
 
-using Arbaureal.KanaDoIT.BaseResources;
-
-namespace Arbaureal.KanaDoIT.Views
+namespace Arbaureal.KanaDoIT.Views.Hiragana
 {
-    public partial class Katakana : Page
+    public partial class ReadnListen : HiraganaBaseView
     {
         private Random random;
         private BaseResources.DictionaryKanaInfo dictKana;
         private BaseResources.KanaKey currentKanaKey;
 
-        public Katakana()
+        public ReadnListen()
         {
             InitializeComponent();
             
@@ -31,9 +29,10 @@ namespace Arbaureal.KanaDoIT.Views
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            //((MainPage)App.Current.RootVisual).
             dictKana = new BaseResources.DictionaryKanaInfo();
 
-            kanaPlaceholder.FontFamily = BaseResources.DictionaryKanaInfo.KatakanaFont;
+            kanaPlaceholder.FontFamily = BaseResources.DictionaryKanaInfo.HiraganaFont;
             kanaPlaceholder.FontSize = 200;
 
             currentKanaKey = BaseResources.KanaKey.A;

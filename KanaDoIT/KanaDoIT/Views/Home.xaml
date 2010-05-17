@@ -3,7 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
-    xmlns:Kanaboard="clr-namespace:Arbaureal.KanaDoIT.Kanaboard.KanaboardObjects.View;assembly=Kanaboard"
     mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480"
     Title="Home"
     Style="{StaticResource PageStyle}">
@@ -21,22 +20,16 @@
                                          NavigateUri="/Home" TargetName="ContentFrame" Content="Home" MouseEnter="Link_MouseEnter"/>
 
                     <HyperlinkButton x:Name="HiraganLink" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/Hiragana" TargetName="ContentFrame" Content="Hiragana" MouseEnter="Link_MouseEnter"/>
+                                         NavigateUri="/Hiragana/Introduction" TargetName="ContentFrame" Content="Hiragana" MouseEnter="Link_MouseEnter"/>
 
                     <HyperlinkButton x:Name="KatakanaLink" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/Katakana" TargetName="ContentFrame" Content="Katakana" MouseEnter="Link_MouseEnter"/>
+                                         NavigateUri="/Katakana/Introduction" TargetName="ContentFrame" Content="Katakana" MouseEnter="Link_MouseEnter"/>
 
                     <HyperlinkButton x:Name="NounsLink" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/Nouns" TargetName="ContentFrame" Content="Nouns" MouseEnter="Link_MouseEnter"/>
+                                         NavigateUri="/Nouns/Nouns" TargetName="ContentFrame" Content="Nouns" MouseEnter="Link_MouseEnter"/>
 
                     <HyperlinkButton x:Name="TimeLink" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/Time" TargetName="ContentFrame" Content="Time" MouseEnter="Link_MouseEnter"/>
-
-                    <HyperlinkButton x:Name="Link2" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/About" TargetName="ContentFrame" Content="About" MouseEnter="Link_MouseEnter"/>
-                </StackPanel>
-                <StackPanel x:Name="kanaboardStackPanel" HorizontalAlignment="Center" Grid.Row="1">
-                    <Kanaboard:Kanaboard x:Name="Kanaboard"/>
+                                         NavigateUri="/Time/Time" TargetName="ContentFrame" Content="Time" MouseEnter="Link_MouseEnter"/>
                 </StackPanel>
             </Grid>
         </ScrollViewer>

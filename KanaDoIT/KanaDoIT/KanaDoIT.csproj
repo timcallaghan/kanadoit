@@ -85,8 +85,24 @@
     <Compile Include="Views\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Hiragana.xaml.cs">
-      <DependentUpon>Hiragana.xaml</DependentUpon>
+    <Compile Include="Views\Hiragana\BasicChallenge.xaml.cs">
+      <DependentUpon>BasicChallenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hiragana\HiraganaBaseView.cs" />
+    <Compile Include="Views\Hiragana\Introduction.xaml.cs">
+      <DependentUpon>Introduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hiragana\ListeningChallenge.xaml.cs">
+      <DependentUpon>ListeningChallenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hiragana\ReadingChallenge.xaml.cs">
+      <DependentUpon>ReadingChallenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hiragana\ReadnListen.xaml.cs">
+      <DependentUpon>ReadnListen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hiragana\Write.xaml.cs">
+      <DependentUpon>Write.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -95,15 +111,34 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Katakana.xaml.cs">
-      <DependentUpon>Katakana.xaml</DependentUpon>
+    <Compile Include="Views\ILearningArea.cs" />
+    <Compile Include="Views\Katakana\BasicChallenge.xaml.cs">
+      <DependentUpon>BasicChallenge.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Nouns.xaml.cs">
+    <Compile Include="Views\Katakana\Introduction.xaml.cs">
+      <DependentUpon>Introduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Katakana\ListeningChallenge.xaml.cs">
+      <DependentUpon>ListeningChallenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Katakana\ReadingChallenge.xaml.cs">
+      <DependentUpon>ReadingChallenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Katakana\ReadnListen.xaml.cs">
+      <DependentUpon>ReadnListen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Katakana\KatakanaBaseView.cs" />
+    <Compile Include="Views\Katakana\Write.xaml.cs">
+      <DependentUpon>Write.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Nouns\Nouns.xaml.cs">
       <DependentUpon>Nouns.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Time.xaml.cs">
+    <Compile Include="Views\Nouns\NounsBaseView.cs" />
+    <Compile Include="Views\Time\Time.xaml.cs">
       <DependentUpon>Time.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Time\TimeBaseView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -135,25 +170,19 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\Katakana.xaml">
+    <Page Include="Views\Katakana\ReadnListen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\Hiragana.xaml">
+    <Page Include="Views\Nouns\Nouns.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\Nouns.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Views\Time.xaml">
+    <Page Include="Views\Time\Time.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,6 +203,64 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Code\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Hiragana\ReadnListen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Hiragana\Introduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Hiragana\Write.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Hiragana\BasicChallenge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Hiragana\ReadingChallenge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Hiragana\ListeningChallenge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Katakana\BasicChallenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Katakana\Introduction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Katakana\ListeningChallenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Katakana\ReadingChallenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Katakana\Write.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

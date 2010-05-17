@@ -15,9 +15,9 @@ using System.Windows.Markup;
 
 using Arbaureal.KanaDoIT.BaseResources;
 
-namespace Arbaureal.KanaDoIT.Views
+namespace Arbaureal.KanaDoIT.Views.Nouns
 {
-    public partial class Nouns : Page
+    public partial class Nouns : NounsBaseView
     {
         private BaseResources.DictionaryNouns dictNouns;
         private Random random;
