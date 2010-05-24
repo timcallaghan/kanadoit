@@ -17,5 +17,10 @@ namespace Arbaureal.KanaDoIT.Kanaboard.KanaboardObjects.View
     {
         void KanaTypeChanged(KanaType type);
         event EventHandler<KanaboardKeyPressedEventArgs> KeyPressed;
+        event EventHandler<EventArgs> SelectAll;
+        event EventHandler<EventArgs> UnselectAll;
+        bool IsSelectMode { get; set; }
+        void InitialiseFromList(ListKanaKeys listKanaKeys);
+        void DisableItemsNotInList(ListKanaKeys listKanaKeys);
     }
 }

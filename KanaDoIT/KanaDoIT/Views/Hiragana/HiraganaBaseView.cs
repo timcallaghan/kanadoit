@@ -11,6 +11,7 @@ using System.Windows.Shapes;
 using System.Collections.Generic;
 
 using Arbaureal.KanaDoIT.Views;
+using Arbaureal.KanaDoIT.BaseResources;
 
 namespace Arbaureal.KanaDoIT.Views.Hiragana
 {
@@ -21,9 +22,14 @@ namespace Arbaureal.KanaDoIT.Views.Hiragana
             get { return LearningArea.Hiragana; }
         }
 
-        public Color MenuColour
+        public static Color StaticMenuColour
         {
             get { return Color.FromArgb(255, 0, 0, 255); }
+        }
+
+        public Color MenuColour
+        {
+            get { return StaticMenuColour; }
         }
         
         public List<Topic> GetListOfTopics()
@@ -31,13 +37,34 @@ namespace Arbaureal.KanaDoIT.Views.Hiragana
             List<Topic> listTopics = new List<Topic>();
 
             listTopics.Add(new Topic("Introduction", "/Hiragana/Introduction"));
+            listTopics.Add(new Topic("Select Characters", "/Hiragana/SelectCharacters"));
             listTopics.Add(new Topic(@"Read & Listen", "/Hiragana/ReadnListen"));
             listTopics.Add(new Topic("Write", "/Hiragana/Write"));
-            listTopics.Add(new Topic("Basic Challenge", "/Hiragana/BasicChallenge"));
             listTopics.Add(new Topic("Reading Challenge", "/Hiragana/ReadingChallenge"));
+            listTopics.Add(new Topic("Writing Challenge", "/Hiragana/WritingChallenge"));
             listTopics.Add(new Topic("Listening Challenge", "/Hiragana/ListeningChallenge"));
 
             return listTopics;
-        }        
+        }
+
+        public static ListKanaKeys ListKanaKeys;
+
+        static HiraganaBaseView()
+        {
+            ListKanaKeys = new ListKanaKeys();
+        }
+
+        public void CheckListOfKanaKeys()
+        {
+            if (ListKanaKeys.Count == 0)
+            {
+                // The user hasn't selected any keys to learn so default
+                // to adding all keys
+                for (int KanaKeyEnumVal = (int)KanaKey.A; KanaKeyEnumVal <= (int)KanaKey.N; ++KanaKeyEnumVal)
+                {
+                    ListKanaKeys.Add((KanaKey)KanaKeyEnumVal);
+                }
+            }
+        }
     }
 }

@@ -17,9 +17,9 @@
                 <TextBlock x:Name="kanaPlaceholder" HorizontalAlignment="Center" Margin="10,10,10,10"/>
                 <TextBlock x:Name="romajiPlaceholder" FontSize="50" HorizontalAlignment="Center"/>
 
-                <Button x:Name="btnCycle" Click="btnCycle_Click" Content="Next" Width="222"></Button>
-                <Button x:Name="btnRetry" Click="btnRetry_Click" Content="Retry" Width="222"></Button>
-                <Button x:Name="btnUndo" Click="btnUndo_Click" Content="Undo" Width="222"></Button>
+                <Button x:Name="btnCycle" Click="btnCycle_Click" Content="Next" Width="300" HorizontalAlignment="Center"></Button>
+                <Button x:Name="btnRetry" Click="btnRetry_Click" Content="Retry" Width="300" HorizontalAlignment="Center"></Button>
+                <Button x:Name="btnUndo" Click="btnUndo_Click" Content="Undo" Width="300" HorizontalAlignment="Center"></Button>
             </StackPanel>
 
         </ScrollViewer>

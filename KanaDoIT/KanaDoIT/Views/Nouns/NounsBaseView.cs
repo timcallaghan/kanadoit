@@ -19,21 +19,26 @@ namespace Arbaureal.KanaDoIT.Views.Nouns
             get { return LearningArea.Nouns; }
         }
 
-        public Color MenuColour
+        public static Color StaticMenuColour
         {
             get { return Color.FromArgb(255, 200, 0, 200); }
+        }
+
+        public Color MenuColour
+        {
+            get { return StaticMenuColour; }
         }
 
         public List<Topic> GetListOfTopics()
         {
             List<Topic> listTopics = new List<Topic>();
 
-            listTopics.Add(new Topic("Introduction", "/Nouns/Introduction"));
-            listTopics.Add(new Topic(@"Read & Listen", "/Nouns/ReadnListen"));
-            listTopics.Add(new Topic("Write", "/Nouns/Write"));
-            listTopics.Add(new Topic("Basic Challenge", "/Nouns/BasicChallenge"));
-            listTopics.Add(new Topic("Reading Challenge", "/Nouns/ReadingChallenge"));
-            listTopics.Add(new Topic("Listening Challenge", "/Nouns/ListeningChallenge"));
+            listTopics.Add(new Topic("Nouns", "/Nouns/Nouns"));
+            //listTopics.Add(new Topic(@"Read & Listen", "/Nouns/ReadnListen"));
+            //listTopics.Add(new Topic("Write", "/Nouns/Write"));
+            //listTopics.Add(new Topic("Basic Challenge", "/Nouns/BasicChallenge"));
+            //listTopics.Add(new Topic("Reading Challenge", "/Nouns/ReadingChallenge"));
+            //listTopics.Add(new Topic("Listening Challenge", "/Nouns/ListeningChallenge"));
 
             return listTopics;
         }

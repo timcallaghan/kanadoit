@@ -45,23 +45,70 @@ namespace Arbaureal.KanaDoIT.BaseResources
     public enum KanaType
     {
         Hiragana,
-        Katakana
+        Katakana,
+        Romaji
     }
 
-    public class DictionaryKanaInfo : Dictionary<KanaKey, KanaInfo>
+    public class KanaFont
     {
         public static FontFamily HiraganaFont { get; private set; }
         public static FontFamily KatakanaFont { get; private set; }
+        public static FontFamily RomajiFont { get; private set; }
 
-        static DictionaryKanaInfo()
+        static KanaFont()
         {
             HiraganaFont = new FontFamily("/BaseResources;component/Fonts/PJ_Hiragana.TTF#PJ Hiragana");
             KatakanaFont = new FontFamily("/BaseResources;component/Fonts/PJ_Katakana.TTF#PJ Katakana");
+            RomajiFont = new FontFamily("Portable User Interface");
         }
 
-        public DictionaryKanaInfo()
+        public static FontFamily GetKanaFont(KanaType kanaType)
         {
-            this.Add(KanaKey.A,  new KanaInfo("1", "a", "a.mp3"));
+            switch (kanaType)
+            {
+                case KanaType.Hiragana:
+                    return HiraganaFont;
+                case KanaType.Katakana:
+                    return KatakanaFont;
+                case KanaType.Romaji:
+                    return RomajiFont;
+                default:
+                    return null;
+            }
+        }
+    }
+
+    public class ListKanaKeys : List<KanaKey>
+    {
+        private static Random random = new Random();
+
+        public Nullable<KanaKey> GetRandomKey()
+        {
+            Nullable<KanaKey> randomKey = null;
+
+            if (this.Count > 0)
+            {
+                randomKey = this[random.Next(this.Count)];
+            }
+
+            return randomKey;
+        }
+    }
+
+    // Singleton dictionary of kanakeys and corresponding info
+    public sealed class DictionaryKanaInfo : Dictionary<KanaKey, KanaInfo>
+    {
+        static readonly DictionaryKanaInfo instance = new DictionaryKanaInfo();
+
+        // Explicit static constructor to tell C# compiler
+        // not to mark type as beforefieldinit
+        static DictionaryKanaInfo()
+        {
+        }
+
+        DictionaryKanaInfo()
+        {
+            this.Add(KanaKey.A, new KanaInfo("1", "a", "a.mp3"));
             this.Add(KanaKey.I, new KanaInfo("2", "i", "i.mp3"));
             this.Add(KanaKey.U, new KanaInfo("3", "u", "u.mp3"));
             this.Add(KanaKey.E, new KanaInfo("4", "e", "e.mp3"));
@@ -201,6 +248,14 @@ namespace Arbaureal.KanaDoIT.BaseResources
             this.Add(KanaKey.O_SMALL, new KanaInfo("N", "o", ""));
             this.Add(KanaKey.COMMA, new KanaInfo("I", ",", ""));
             this.Add(KanaKey.FULLSTOP, new KanaInfo("O", ".", ""));
+        }
+
+        public static DictionaryKanaInfo Instance
+        {
+            get
+            {
+                return instance;
+            }
         }
     }
 }

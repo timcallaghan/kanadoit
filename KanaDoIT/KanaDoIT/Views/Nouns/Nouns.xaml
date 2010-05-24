@@ -10,7 +10,14 @@
     Style="{StaticResource PageStyle}">
 
     <Grid x:Name="LayoutRoot">
-        <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txtInfo" Grid.Row="0" Style="{StaticResource ContentTextStyle}" 
+                           Text="Look at the picture and choose the correct noun." />
+        <ScrollViewer x:Name="PageScrollViewer" Grid.Row="1" Style="{StaticResource PageScrollViewerStyle}">
 
             <StackPanel x:Name="ContentStackPanel" HorizontalAlignment="Center">
 

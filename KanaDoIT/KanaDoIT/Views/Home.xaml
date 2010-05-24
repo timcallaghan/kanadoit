@@ -10,27 +10,55 @@
     <Grid x:Name="LayoutRoot">
         <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}" VerticalAlignment="Center">
 
-            <Grid x:Name="OuterStackPanel" HorizontalAlignment="Center">
+            <Grid x:Name="OuterStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <StackPanel x:Name="ContentStackPanel" HorizontalAlignment="Center" Grid.Row="0">
-                    <HyperlinkButton x:Name="Link1" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/Home" TargetName="ContentFrame" Content="Home" MouseEnter="Link_MouseEnter"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
-                    <HyperlinkButton x:Name="HiraganLink" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/Hiragana/Introduction" TargetName="ContentFrame" Content="Hiragana" MouseEnter="Link_MouseEnter"/>
+                <HyperlinkButton x:Name="HiraganLink" 
+                                 Grid.Row="0" Grid.Column="0" Width="200" Height="200"
+                                 NavigateUri="/Hiragana/Introduction" 
+                                 TargetName="ContentFrame" 
+                                 Content="Hiragana" 
+                                 MouseEnter="Link_MouseEnter"
+                                 FontSize="32"
+                                 VerticalContentAlignment="Center"
+                                 HorizontalContentAlignment="Center"/>
 
-                    <HyperlinkButton x:Name="KatakanaLink" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/Katakana/Introduction" TargetName="ContentFrame" Content="Katakana" MouseEnter="Link_MouseEnter"/>
+                <HyperlinkButton x:Name="KatakanaLink" 
+                                 Grid.Row="0" Grid.Column="1" Width="200" Height="200"
+                                 NavigateUri="/Katakana/Introduction" 
+                                 TargetName="ContentFrame" 
+                                 Content="Katakana" 
+                                 MouseEnter="Link_MouseEnter"
+                                 FontSize="32"
+                                 VerticalContentAlignment="Center"
+                                 HorizontalContentAlignment="Center"/>
 
-                    <HyperlinkButton x:Name="NounsLink" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/Nouns/Nouns" TargetName="ContentFrame" Content="Nouns" MouseEnter="Link_MouseEnter"/>
+                <HyperlinkButton x:Name="NounsLink" 
+                                 Grid.Row="1" Grid.Column="0" Width="200" Height="200"
+                                 NavigateUri="/Nouns/Nouns" 
+                                 TargetName="ContentFrame" 
+                                 Content="Nouns" 
+                                 MouseEnter="Link_MouseEnter"
+                                 FontSize="32"
+                                 VerticalContentAlignment="Center"
+                                 HorizontalContentAlignment="Center"/>
 
-                    <HyperlinkButton x:Name="TimeLink" Style="{StaticResource LinkStyle}" 
-                                         NavigateUri="/Time/Time" TargetName="ContentFrame" Content="Time" MouseEnter="Link_MouseEnter"/>
-                </StackPanel>
+                <HyperlinkButton x:Name="TimeLink" 
+                                 Grid.Row="1" Grid.Column="1" Width="200" Height="200"
+                                 NavigateUri="/Time/Time" 
+                                 TargetName="ContentFrame" 
+                                 Content="Time" 
+                                 MouseEnter="Link_MouseEnter"
+                                 FontSize="32"
+                                 VerticalContentAlignment="Center"
+                                 HorizontalContentAlignment="Center"/>
             </Grid>
         </ScrollViewer>
 

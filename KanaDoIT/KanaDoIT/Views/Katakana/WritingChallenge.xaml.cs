@@ -10,21 +10,23 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
-using System.Windows.Ink;
 
 using Arbaureal.KanaDoIT.BaseResources;
+using System.Windows.Ink;
 
 namespace Arbaureal.KanaDoIT.Views.Katakana
 {
-    public partial class Write : KatakanaBaseView
+    public partial class WritingChallenge : KatakanaBaseView
     {
-        private int currentIndex = 0;
+        private ListKanaKeys listKanaKeysToTest;
+        private KanaKey currentKananKey;
 
-        public Write()
+        public WritingChallenge()
         {
             InitializeComponent();
-            SetBoundary();
+            InitializeComponent();
             CheckListOfKanaKeys();
+            SetBoundary();
         }
 
         // Executes when the user navigates to this page.
@@ -34,24 +36,42 @@ namespace Arbaureal.KanaDoIT.Views.Katakana
             kanaPlaceholder.FontSize = 200;
             kanaPlaceholder.Foreground = new SolidColorBrush(Colors.Gray);
 
-            kanaPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].FontCode;
-            romajiPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].Romaji;
+            listKanaKeysToTest = new ListKanaKeys();
+            foreach (KanaKey key in ListKanaKeys)
+            {
+                listKanaKeysToTest.Add(key);
+            }
+
+            currentKananKey = listKanaKeysToTest.GetRandomKey().Value;
+            kanaPlaceholder.Text = DictionaryKanaInfo.Instance[currentKananKey].FontCode;
+            kanaPlaceholder.Opacity = 0.0;
+            romajiPlaceholder.Text = DictionaryKanaInfo.Instance[currentKananKey].Romaji;
         }
 
         private void btnCycle_Click(object sender, RoutedEventArgs e)
         {
-            if (currentIndex < ListKanaKeys.Count - 1)
+            listKanaKeysToTest.Remove(currentKananKey);
+            MyIP.Strokes.Clear();
+
+            Nullable<KanaKey> key = listKanaKeysToTest.GetRandomKey();
+            if (key.HasValue)
             {
-                ++currentIndex;
+                currentKananKey = key.Value;
+                kanaPlaceholder.Text = DictionaryKanaInfo.Instance[currentKananKey].FontCode;
+                kanaPlaceholder.Opacity = 0.0;
+                romajiPlaceholder.Text = DictionaryKanaInfo.Instance[currentKananKey].Romaji;
             }
             else
             {
-                currentIndex = 0;
+                // The user has completed the list
+                txtInfo.Text = "Congratulations!  You have successfully written all of the selected Katakana.";
+                kanaPlaceholder.Visibility = System.Windows.Visibility.Collapsed;
+                romajiPlaceholder.Visibility = System.Windows.Visibility.Collapsed;
+                btnCycle.Visibility = System.Windows.Visibility.Collapsed;
+                btnShowAnswer.Visibility = System.Windows.Visibility.Collapsed;
+                btnUndo.Visibility = System.Windows.Visibility.Collapsed;
+                MyIP.Visibility = System.Windows.Visibility.Collapsed;
             }
-
-            kanaPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].FontCode;
-            romajiPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].Romaji;
-            MyIP.Strokes.Clear();
         }
 
         Stroke NewStroke;
@@ -64,7 +84,7 @@ namespace Arbaureal.KanaDoIT.Views.Katakana
             MyStylusPointCollection.Add(e.StylusDevice.GetStylusPoints(MyIP));
             NewStroke = new Stroke(MyStylusPointCollection);
             DrawingAttributes myDa = new DrawingAttributes();
-            myDa.Color = Color.FromArgb(200,255,0,0);
+            myDa.Color = Color.FromArgb(200, 255, 0, 0);
             myDa.Width = 10;
             myDa.Height = 10;
             NewStroke.DrawingAttributes = myDa;
@@ -88,16 +108,11 @@ namespace Arbaureal.KanaDoIT.Views.Katakana
         //Set the Clip property of the inkpresenter so that the strokes
         //are contained within the boundary of the inkpresenter
         private void SetBoundary()
-        {           
+        {
             RectangleGeometry MyRectangleGeometry = new RectangleGeometry();
             MyRectangleGeometry.Rect = new Rect(0, 0, MyIP.ActualWidth, MyIP.ActualHeight);
             MyIP.Clip = MyRectangleGeometry;
             MyIP.Background = new SolidColorBrush(Color.FromArgb(50, 150, 150, 150));
-        }
-
-        private void btnRetry_Click(object sender, RoutedEventArgs e)
-        {
-            MyIP.Strokes.Clear();
         }
 
         private void btnUndo_Click(object sender, RoutedEventArgs e)
@@ -107,5 +122,11 @@ namespace Arbaureal.KanaDoIT.Views.Katakana
                 MyIP.Strokes.RemoveAt(MyIP.Strokes.Count - 1);
             }
         }
+
+        private void btnShowAnswer_Click(object sender, RoutedEventArgs e)
+        {
+            kanaPlaceholder.Opacity = 1.0;
+        }
+
     }
 }

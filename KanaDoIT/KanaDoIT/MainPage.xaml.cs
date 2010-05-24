@@ -69,17 +69,23 @@ namespace Arbaureal.KanaDoIT
                         hlButton.TargetName = "ContentFrame";
                         hlButton.Content = topic.Name;
                         //hlButton.Style = (Style)Application.Current.Resources["LinkStyle"];
+
                         LinearGradientBrush hlgb = new LinearGradientBrush();
                         GradientStop hlstart = new GradientStop();
                         hlstart.Color = Colors.White;
                         hlstart.Offset = 0.0;
                         GradientStop hlend = new GradientStop();
-                        hlend.Color = learningArea.MenuColour;
+                        hlend.Color = Colors.White;
                         hlend.Offset = 1.0;
+                        GradientStop hlMid = new GradientStop();
+                        hlMid.Color = learningArea.MenuColour;
+                        hlMid.Offset = 0.5;
                         hlgb.GradientStops.Add(hlstart);
+                        hlgb.GradientStops.Add(hlMid);
                         hlgb.GradientStops.Add(hlend);
                         hlgb.StartPoint = new Point(0.5, 0.0);
                         hlgb.EndPoint = new Point(0.5, 1.0);
+
                         hlButton.Background = hlgb;
                         hlButton.FontSize = 16;
                         hlButton.Foreground = new SolidColorBrush(Colors.Black);

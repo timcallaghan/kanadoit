@@ -19,21 +19,26 @@ namespace Arbaureal.KanaDoIT.Views.Time
             get { return LearningArea.Time; }
         }
 
-        public Color MenuColour
+        public static Color StaticMenuColour
         {
             get { return Color.FromArgb(255, 255, 255, 0); }
+        }
+
+        public Color MenuColour
+        {
+            get { return StaticMenuColour; }
         }
 
         public List<Topic> GetListOfTopics()
         {
             List<Topic> listTopics = new List<Topic>();
 
-            listTopics.Add(new Topic("Introduction", "/Time/Introduction"));
-            listTopics.Add(new Topic(@"Read & Listen", "/Time/ReadnListen"));
-            listTopics.Add(new Topic("Write", "/Time/Write"));
-            listTopics.Add(new Topic("Basic Challenge", "/Time/BasicChallenge"));
-            listTopics.Add(new Topic("Reading Challenge", "/Time/ReadingChallenge"));
-            listTopics.Add(new Topic("Listening Challenge", "/Time/ListeningChallenge"));
+            listTopics.Add(new Topic("Time", "/Time/Time"));
+            //listTopics.Add(new Topic(@"Read & Listen", "/Time/ReadnListen"));
+            //listTopics.Add(new Topic("Write", "/Time/Write"));
+            //listTopics.Add(new Topic("Basic Challenge", "/Time/BasicChallenge"));
+            //listTopics.Add(new Topic("Reading Challenge", "/Time/ReadingChallenge"));
+            //listTopics.Add(new Topic("Listening Challenge", "/Time/ListeningChallenge"));
 
             return listTopics;
         }

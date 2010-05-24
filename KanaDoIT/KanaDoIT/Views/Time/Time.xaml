@@ -11,11 +11,14 @@
            Title="Time Page">
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
             <RowDefinition Height="260"></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <AnalogClock:Clock x:Name="AnalogClockControl" Height="250" Width="250" VerticalAlignment="Top" Grid.Row="0"/>
-        <Button x:Name="btnNewTime" Width="100" Height="20" Content="Set new time" Grid.Row="1" VerticalAlignment="Top" Click="btnNewTime_Click" />
+        <TextBlock x:Name="txtInfo" Grid.Row="0" Style="{StaticResource ContentTextStyle}" 
+                           Text="Practice saying the time." />
+        <AnalogClock:Clock x:Name="AnalogClockControl" Height="250" Width="250" VerticalAlignment="Top" Grid.Row="1"/>
+        <Button x:Name="btnNewTime" Width="100" Height="20" Content="Set new time" Grid.Row="2" VerticalAlignment="Top" Click="btnNewTime_Click" />
     </Grid>
 </views:TimeBaseView>

@@ -12,44 +12,45 @@ using System.Windows.Shapes;
 using System.Windows.Navigation;
 using System.Windows.Ink;
 
+using Arbaureal.KanaDoIT.BaseResources;
+
 namespace Arbaureal.KanaDoIT.Views.Hiragana
 {
     public partial class Write : HiraganaBaseView
     {
-        private Random random;
-        private BaseResources.DictionaryKanaInfo dictKana;
-        private BaseResources.KanaKey currentKanaKey;
+        private int currentIndex = 0;
 
         public Write()
         {
             InitializeComponent();
             SetBoundary();
-            
-            random = new Random();
+            CheckListOfKanaKeys();
         }
 
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //((MainPage)App.Current.RootVisual).
-            dictKana = new BaseResources.DictionaryKanaInfo();
-
-            kanaPlaceholder.FontFamily = BaseResources.DictionaryKanaInfo.HiraganaFont;
+            kanaPlaceholder.FontFamily = BaseResources.KanaFont.HiraganaFont;
             kanaPlaceholder.FontSize = 200;
             kanaPlaceholder.Foreground = new SolidColorBrush(Colors.Gray);
 
-            currentKanaKey = BaseResources.KanaKey.A;
-
-            kanaPlaceholder.Text = dictKana[currentKanaKey].FontCode;
-            romajiPlaceholder.Text = dictKana[currentKanaKey].Romaji;
+            kanaPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].FontCode;
+            romajiPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].Romaji;
         }
 
         private void btnCycle_Click(object sender, RoutedEventArgs e)
         {
-            currentKanaKey = (BaseResources.KanaKey)random.Next((int)BaseResources.KanaKey.N + 1);
+            if (currentIndex < ListKanaKeys.Count - 1)
+            {
+                ++currentIndex;
+            }
+            else
+            {
+                currentIndex = 0;
+            }
 
-            kanaPlaceholder.Text = dictKana[currentKanaKey].FontCode;
-            romajiPlaceholder.Text = dictKana[currentKanaKey].Romaji;
+            kanaPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].FontCode;
+            romajiPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].Romaji;
             MyIP.Strokes.Clear();
         }
 
@@ -88,8 +89,6 @@ namespace Arbaureal.KanaDoIT.Views.Hiragana
         //are contained within the boundary of the inkpresenter
         private void SetBoundary()
         {
-            //MyIP.Width = 500;
-            //MyIP.Height = 500;
             RectangleGeometry MyRectangleGeometry = new RectangleGeometry();
             MyRectangleGeometry.Rect = new Rect(0, 0, MyIP.ActualWidth, MyIP.ActualHeight);
             MyIP.Clip = MyRectangleGeometry;

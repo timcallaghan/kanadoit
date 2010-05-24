@@ -17,41 +17,42 @@ namespace Arbaureal.KanaDoIT.Views.Katakana
 {
     public partial class ReadnListen : KatakanaBaseView
     {
-        private Random random;
-        private BaseResources.DictionaryKanaInfo dictKana;
-        private BaseResources.KanaKey currentKanaKey;
+        private int currentIndex = 0;
 
         public ReadnListen()
         {
             InitializeComponent();
-            
-            random = new Random();
+
+            CheckListOfKanaKeys();
         }
 
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            dictKana = new BaseResources.DictionaryKanaInfo();
-
-            kanaPlaceholder.FontFamily = BaseResources.DictionaryKanaInfo.KatakanaFont;
+            kanaPlaceholder.FontFamily = BaseResources.KanaFont.KatakanaFont;
             kanaPlaceholder.FontSize = 200;
 
-            currentKanaKey = BaseResources.KanaKey.A;
-
-            kanaPlaceholder.Text = dictKana[currentKanaKey].FontCode;
-            romajiPlaceholder.Text = dictKana[currentKanaKey].Romaji;
-            SoundPlayer.Source = dictKana[currentKanaKey].SoundFilePath;
+            kanaPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].FontCode;
+            romajiPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].Romaji;
+            SoundPlayer.Source = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].SoundFilePath;
         }
 
         private void btnCycle_Click(object sender, RoutedEventArgs e)
         {
-            currentKanaKey = (BaseResources.KanaKey)random.Next((int)BaseResources.KanaKey.N + 1);
+            if (currentIndex < ListKanaKeys.Count - 1)
+            {
+                ++currentIndex;
+            }
+            else
+            {
+                currentIndex = 0;
+            }
 
-            kanaPlaceholder.Text = dictKana[currentKanaKey].FontCode;
-            romajiPlaceholder.Text = dictKana[currentKanaKey].Romaji;
+            kanaPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].FontCode;
+            romajiPlaceholder.Text = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].Romaji;
 
             SoundPlayer.Stop();
-            SoundPlayer.Source = dictKana[currentKanaKey].SoundFilePath;
+            SoundPlayer.Source = DictionaryKanaInfo.Instance[ListKanaKeys[currentIndex]].SoundFilePath;
         }
 
         private void btnReplay_Click(object sender, RoutedEventArgs e)

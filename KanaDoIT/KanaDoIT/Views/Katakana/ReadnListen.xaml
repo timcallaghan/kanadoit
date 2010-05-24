@@ -18,8 +18,8 @@
                 <TextBlock x:Name="romajiPlaceholder" FontSize="50" HorizontalAlignment="Center"/>
                 <MediaElement x:Name="SoundPlayer" AutoPlay="True" />
 
-                <Button x:Name="btnCycle" Click="btnCycle_Click" Content="Next" Width="222"></Button>
-                <Button x:Name="btnReplay" Click="btnReplay_Click"  Content="Replay" Width="222"></Button>
+                <Button x:Name="btnCycle" Click="btnCycle_Click" Content="Next" Width="300"></Button>
+                <Button x:Name="btnReplay" Click="btnReplay_Click"  Content="Replay" Width="300"></Button>
 
             </StackPanel>
 

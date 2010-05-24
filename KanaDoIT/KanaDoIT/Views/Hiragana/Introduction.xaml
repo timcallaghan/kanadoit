@@ -19,7 +19,9 @@
                 <TextBlock Style="{StaticResource ContentTextStyle}" 
                            Text="Hiragana is a Japanese system of writing.  You can use KanaDoIT to learn Hiragana." />
                 <TextBlock Style="{StaticResource ContentTextStyle}" 
-                           Text="Use the links on the left to practice reading, listening to, and writing Hiragana." />
+                           Text="To begin, click on Select Characters to choose the base set of Hiragana characters you want to learn." />
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
+                           Text="Then use the links on the left to practice reading, listening to, and writing Hiragana." />
                 <TextBlock Style="{StaticResource ContentTextStyle}" 
                            Text="When you are ready, try the Challenges to test how well you have learned Hiragana!" />
             </StackPanel>

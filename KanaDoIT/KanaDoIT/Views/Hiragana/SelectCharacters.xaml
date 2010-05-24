@@ -1,25 +1,25 @@
-﻿<views:KatakanaBaseView x:Class="Arbaureal.KanaDoIT.Views.Katakana.ListeningChallenge" 
+﻿<views:HiraganaBaseView x:Class="Arbaureal.KanaDoIT.Views.Hiragana.SelectCharacters" 
            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-           xmlns:views="clr-namespace:Arbaureal.KanaDoIT.Views.Katakana"
+           xmlns:views="clr-namespace:Arbaureal.KanaDoIT.Views.Hiragana"
            xmlns:Kanaboard="clr-namespace:Arbaureal.KanaDoIT.Kanaboard.KanaboardObjects.View;assembly=Kanaboard"
            mc:Ignorable="d"
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
            d:DesignWidth="640" d:DesignHeight="480"
-           Title="Hiragana - Listening Challenge"
+           Title="Hiragana - Select Characters"
            Style="{StaticResource PageStyle}">
     <Grid x:Name="LayoutRoot">
         <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}" VerticalAlignment="Center">
             <StackPanel x:Name="kanaboardStackPanel" HorizontalAlignment="Center" Grid.Row="1">
-                <TextBlock x:Name="txtInfo" Style="{StaticResource ContentTextStyle}" 
-                           Text="Select the correct Katakana character based on what you hear." />
-                <MediaElement x:Name="SoundPlayer" AutoPlay="True" />
-                <Button x:Name="btnReplay" Click="btnReplay_Click"  Content="Replay Sound" Width="300"></Button>
-                <Rectangle Height="10" />
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
+                           Text="Select which Hiragana characters you would like to learn." />
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
+                           Text="When you are done, select from the menu items on the left to start learning!" />
                 <Kanaboard:Kanaboard x:Name="Kanaboard"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>
-</views:KatakanaBaseView>
+</views:HiraganaBaseView>
+    
