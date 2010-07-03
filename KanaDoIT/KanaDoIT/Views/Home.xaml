@@ -25,7 +25,6 @@
                                  NavigateUri="/Hiragana/Introduction" 
                                  TargetName="ContentFrame" 
                                  Content="Hiragana" 
-                                 MouseEnter="Link_MouseEnter"
                                  FontSize="32"
                                  VerticalContentAlignment="Center"
                                  HorizontalContentAlignment="Center"/>
@@ -35,7 +34,6 @@
                                  NavigateUri="/Katakana/Introduction" 
                                  TargetName="ContentFrame" 
                                  Content="Katakana" 
-                                 MouseEnter="Link_MouseEnter"
                                  FontSize="32"
                                  VerticalContentAlignment="Center"
                                  HorizontalContentAlignment="Center"/>
@@ -45,7 +43,6 @@
                                  NavigateUri="/Nouns/Nouns" 
                                  TargetName="ContentFrame" 
                                  Content="Nouns" 
-                                 MouseEnter="Link_MouseEnter"
                                  FontSize="32"
                                  VerticalContentAlignment="Center"
                                  HorizontalContentAlignment="Center"/>
@@ -55,14 +52,11 @@
                                  NavigateUri="/Time/Time" 
                                  TargetName="ContentFrame" 
                                  Content="Time" 
-                                 MouseEnter="Link_MouseEnter"
                                  FontSize="32"
                                  VerticalContentAlignment="Center"
                                  HorizontalContentAlignment="Center"/>
             </Grid>
         </ScrollViewer>
-
-        <MediaElement x:Name="meMusic" AutoPlay="True" />
     </Grid>
 
 </navigation:Page>

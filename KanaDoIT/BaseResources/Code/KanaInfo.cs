@@ -141,7 +141,7 @@ namespace Arbaureal.KanaDoIT.BaseResources
             this.Add(KanaKey.SO, new KanaInfo("g", "so", "so.mp3"));
 
             this.Add(KanaKey.ZA, new KanaInfo("A", "za", "za.mp3"));
-            this.Add(KanaKey.ZI, new KanaInfo("S", "ji", "ji_z.mp3"));
+            this.Add(KanaKey.ZI, new KanaInfo("S", "ji", "zi.mp3"));
             this.Add(KanaKey.ZU, new KanaInfo("D", "zu", "zu.mp3"));
             this.Add(KanaKey.ZE, new KanaInfo("F", "ze", "ze.mp3"));
             this.Add(KanaKey.ZO, new KanaInfo("G", "zo", "zo.mp3"));
@@ -150,9 +150,9 @@ namespace Arbaureal.KanaDoIT.BaseResources
             this.Add(KanaKey.SYU, new KanaInfo("s>", "shu", "shu.mp3"));
             this.Add(KanaKey.SYO, new KanaInfo("s?", "sho", "sho.mp3"));
 
-            this.Add(KanaKey.ZYA, new KanaInfo("S<", "ja", "ja_jya.mp3"));
-            this.Add(KanaKey.ZYU, new KanaInfo("S>", "ju", "ju_jyu.mp3"));
-            this.Add(KanaKey.ZYO, new KanaInfo("S?", "jo", "jo_jyo.mp3"));
+            this.Add(KanaKey.ZYA, new KanaInfo("S<", "ja", "ja.mp3"));
+            this.Add(KanaKey.ZYU, new KanaInfo("S>", "ju", "ju.mp3"));
+            this.Add(KanaKey.ZYO, new KanaInfo("S?", "jo", "jo.mp3"));
 
             this.Add(KanaKey.TA, new KanaInfo("z", "ta", "ta.mp3"));
             this.Add(KanaKey.TI, new KanaInfo("x", "chi", "chi.mp3"));
@@ -161,8 +161,8 @@ namespace Arbaureal.KanaDoIT.BaseResources
             this.Add(KanaKey.TO, new KanaInfo("b", "to", "to.mp3"));
 
             this.Add(KanaKey.DA, new KanaInfo("Z", "da", "da.mp3"));
-            this.Add(KanaKey.DI, new KanaInfo("X", "ji", "ji_d.mp3"));
-            this.Add(KanaKey.DU, new KanaInfo("C", "zu", "zu_d.mp3"));
+            this.Add(KanaKey.DI, new KanaInfo("X", "ji", "di.mp3"));
+            this.Add(KanaKey.DU, new KanaInfo("C", "zu", "du.mp3"));
             this.Add(KanaKey.DE, new KanaInfo("V", "de", "de.mp3"));
             this.Add(KanaKey.DO, new KanaInfo("B", "do", "do.mp3"));
 
@@ -235,7 +235,7 @@ namespace Arbaureal.KanaDoIT.BaseResources
             this.Add(KanaKey.RYO, new KanaInfo(@"=?", "ryo", "ryo.mp3"));
 
             this.Add(KanaKey.WA, new KanaInfo("'", "wa", "wa.mp3"));
-            this.Add(KanaKey.WO, new KanaInfo("n", "o", "o_w.mp3"));
+            this.Add(KanaKey.WO, new KanaInfo("n", "o", "wo.mp3"));
 
             this.Add(KanaKey.N, new KanaInfo("m", "n", "n.mp3"));
 

@@ -222,9 +222,6 @@
     <Resource Include="Music\Chime_G2.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sounds\aa.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Sounds\ba.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -271,9 +268,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sounds\e.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\ee.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sounds\fu.mp3" />
@@ -327,24 +321,6 @@
     <Resource Include="Sounds\i.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sounds\ii.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\ja_jya.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\ji_d.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\ji_z.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\jo_jyo.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\ju_jyu.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Sounds\ka.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -352,12 +328,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sounds\ki.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\kippu.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\kitte.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sounds\ko.mp3" />
@@ -427,12 +397,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sounds\o.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\o_w.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sounds\oo.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sounds\pa.mp3" />
@@ -522,9 +486,6 @@
     <Resource Include="Sounds\u.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sounds\uu.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Sounds\wa.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -549,7 +510,13 @@
     <Resource Include="Sounds\zu.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sounds\zu_d.mp3" />
+    <Resource Include="Sounds\di.mp3" />
+    <Resource Include="Sounds\du.mp3" />
+    <Resource Include="Sounds\ja.mp3" />
+    <Resource Include="Sounds\jo.mp3" />
+    <Resource Include="Sounds\ju.mp3" />
+    <Resource Include="Sounds\wo.mp3" />
+    <Resource Include="Sounds\zi.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>

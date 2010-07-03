@@ -20,8 +20,6 @@ namespace Arbaureal.KanaDoIT
 {
     public partial class Home : Page
     {
-        private BaseResources.ChimeGenerator chimeGenerator;
-
         public Home()
         {
             InitializeComponent();
@@ -29,10 +27,7 @@ namespace Arbaureal.KanaDoIT
 
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            chimeGenerator = new BaseResources.ChimeGenerator(LayoutRoot);
-
-            
+        {            
             LinearGradientBrush gb = new LinearGradientBrush();
             GradientStop start = new GradientStop();
             start.Color = Colors.White;
@@ -84,11 +79,6 @@ namespace Arbaureal.KanaDoIT
             gb.StartPoint = new Point(0.5, 0.0);
             gb.EndPoint = new Point(0.5, 1.0);
             TimeLink.Background = gb;
-        }
-
-        private void Link_MouseEnter(object sender, MouseEventArgs e)
-        {
-            chimeGenerator.PlayRandomChime();
         }
     }
 }

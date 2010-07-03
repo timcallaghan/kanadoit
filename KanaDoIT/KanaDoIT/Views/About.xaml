@@ -14,17 +14,21 @@
 
                 <TextBlock x:Name="HeaderText" Style="{StaticResource HeaderTextStyle}" 
                            Text="About"/>
-                <TextBlock x:Name="ContentText1" Style="{StaticResource ContentTextStyle}" 
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
                            Text="KanaDoIT is a program for learning Japanese Hiragana and Katakana." />
-                <TextBlock x:Name="ContentText2" Style="{StaticResource ContentTextStyle}" 
-                           Text="Design: Jill Penridge and Tim Callaghan." />
-                <TextBlock x:Name="ContentText3" Style="{StaticResource ContentTextStyle}" 
-                           Text="Programming: Tim Callaghan." />
-                <TextBlock x:Name="ContentText4" Style="{StaticResource ContentTextStyle}" 
-                           Text="Copyright: Tim Callaghan 2010." />
-                <TextBlock x:Name="ContentText5" Style="{StaticResource ContentTextStyle}" 
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
+                           Text="Design: Jill Penridge and Tim Callaghan" />
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
+                           Text="Programming: Tim Callaghan" />
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
+                           Text="Audio Recordings: Ayumi Kenneally" />
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
+                           Text="ClipArt: http://www.openclipart.org" />
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
+                           Text="Copyright: Tim Callaghan 2010" />
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
                            Text="Use limited to www.arbaureal.com only for non-commercial use." />
-                <TextBlock x:Name="ContentText6" Style="{StaticResource ContentTextStyle}" 
+                <TextBlock Style="{StaticResource ContentTextStyle}" 
                            Text="Embedding via inline linking, frames or similar not permitted." />
 
             </StackPanel>
