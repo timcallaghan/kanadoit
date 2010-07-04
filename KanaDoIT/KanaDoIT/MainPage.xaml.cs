@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Net.NetworkInformation;
 
 using Arbaureal.KanaDoIT.Views;
 
@@ -20,6 +21,11 @@ namespace Arbaureal.KanaDoIT
         public MainPage()
         {
             InitializeComponent();
+
+            if (App.Current.IsRunningOutOfBrowser)
+            {
+                Installation.Content = "Uninstall";
+            }
         }
 
         // After the Frame navigates, ensure the HyperlinkButton representing the current page is selected
@@ -28,6 +34,22 @@ namespace Arbaureal.KanaDoIT
             if (e.Content != null)
             {
                 foreach (UIElement child in LinksStackPanel.Children)
+                {
+                    HyperlinkButton hb = child as HyperlinkButton;
+                    if (hb != null && hb.NavigateUri != null)
+                    {
+                        if (hb.NavigateUri.ToString().Equals(e.Uri.ToString()))
+                        {
+                            VisualStateManager.GoToState(hb, "ActiveLink", true);
+                        }
+                        else
+                        {
+                            VisualStateManager.GoToState(hb, "InactiveLink", true);
+                        }
+                    }
+                }
+
+                foreach (UIElement child in UtilsStackPanel.Children)
                 {
                     HyperlinkButton hb = child as HyperlinkButton;
                     if (hb != null && hb.NavigateUri != null)

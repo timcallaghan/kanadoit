@@ -18,13 +18,37 @@ namespace Arbaureal.KanaDoIT
         {
             this.Startup += this.Application_Startup;
             this.UnhandledException += this.Application_UnhandledException;
-
+            this.CheckAndDownloadUpdateCompleted += new CheckAndDownloadUpdateCompletedEventHandler(App_CheckAndDownloadUpdateCompleted);
             InitializeComponent();
+        }
+
+        void App_CheckAndDownloadUpdateCompleted(object sender, CheckAndDownloadUpdateCompletedEventArgs e)
+        {
+            if (e.UpdateAvailable)
+            {
+                MessageBox.Show("An update for KanaDoIT has been downloaded. " +
+                    "Please restart KanaDoIT to run the new version.");
+            }
+            else if (e.Error != null && e.Error is PlatformNotSupportedException)
+            {
+                MessageBox.Show("An update for KanaDoIT is available, " +
+                    "but it requires a newer version of Silverlight. " +
+                    "Please close KanaDoIT and then download and install the latest version of Silverlight.");
+            }
         }
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            this.CheckAndDownloadUpdateAsync();
             this.RootVisual = new MainPage();
+
+            if (App.Current.IsRunningOutOfBrowser)
+            {
+                if (Application.Current.HasElevatedPermissions)
+                {
+                    Application.Current.MainWindow.WindowState = WindowState.Maximized;
+                }
+            }
         }
 
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)

@@ -13,7 +13,13 @@ namespace KanaDoIT.Web
         protected void Page_Load(object sender, EventArgs e)
         {
             var versionNumber = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            SourceParam.Attributes["value"] += "?" + versionNumber;
+            string strSilverlightSouceParam = String.Format
+                (
+                    "<param name=\"source\" value=\"ClientBin/KanaDoIT.xap?{0}\"/>",
+                    versionNumber
+                );
+            LiteralControl silverlightSouceParam = new LiteralControl(strSilverlightSouceParam);
+            SilverlightSouce.Controls.Add(silverlightSouceParam);
         }
     }
 }

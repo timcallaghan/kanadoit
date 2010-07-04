@@ -6,9 +6,9 @@
     xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="400">
 
-    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="42"/>
             <RowDefinition/>
@@ -18,19 +18,15 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
-        <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+        <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0">
 
             <Border x:Name="BrandingBorder" Style="{StaticResource BrandingBorderStyle}">
                 <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
-
-                    <ContentControl Style="{StaticResource LogoIcon}"/>
-                    <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" 
-                               Text="KanaDoIT"/>
-
+                    <Image Source="Icons/KanaDoITLogo.png" Width="32" Height="32" />
                 </StackPanel>
             </Border>
 
-            <Border x:Name="LinksBorder" Style="{StaticResource LinksBorderStyle}">
+            <Border x:Name="LinksBorder" Style="{StaticResource LinksBorderStyle}" HorizontalAlignment="Left" Margin="49,0,0,0" Width="418">
                 <StackPanel x:Name="LinksStackPanel" Style="{StaticResource LinksStackPanelStyle}">
 
                     <HyperlinkButton x:Name="Link1" Style="{StaticResource LinkStyle}" 
@@ -55,25 +51,24 @@
 
                     <HyperlinkButton x:Name="TimeLink" Style="{StaticResource LinkStyle}" 
                                      NavigateUri="/Time/Time" TargetName="ContentFrame" Content="Time"/>
-
-                    <Rectangle x:Name="Divider5" Style="{StaticResource DividerStyle}"/>
-
-                    <HyperlinkButton x:Name="Link2" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/About" TargetName="ContentFrame" Content="About"/>
-
                 </StackPanel>
             </Border>
-
+			
+			<Border x:Name="UtilsMenu" Style="{StaticResource LinksBorderStyle}" HorizontalAlignment="Right" Width="165" Margin="0,0,0,0">
+				<StackPanel x:Name="UtilsStackPanel" Style="{StaticResource LinksStackPanelStyle}" HorizontalAlignment="Right">
+					<HyperlinkButton x:Name="Installation" Style="{StaticResource LinkStyle}"
+                                     NavigateUri="/Installation" TargetName="ContentFrame" Content="Install"/>
+					<Rectangle x:Name="Divider5" Style="{StaticResource DividerStyle}"/>
+					<HyperlinkButton x:Name="About" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/About" TargetName="ContentFrame" Content="About"/>
+				</StackPanel>
+			</Border>
         </Grid>
         
-        <StackPanel x:Name="TopicMenu" Orientation="Vertical" Grid.Row="1" Grid.Column="0">
-            
-        </StackPanel>
+        <StackPanel x:Name="TopicMenu" Orientation="Vertical" Grid.Row="1" Grid.Column="0"/>
 
         <Border x:Name="OuterContentBorder" Grid.Row="1" Grid.Column="1" Style="{StaticResource OutterContentBorderStyle}">
-
             <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}">
-
                 <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
                                   Source="/Home" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed">
                     <navigation:Frame.UriMapper>
@@ -86,9 +81,5 @@
                 </navigation:Frame>
             </Border>
         </Border>
-
-        
-
     </Grid>
-
 </UserControl>
