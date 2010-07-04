@@ -1,10 +1,10 @@
 <OutOfBrowserSettings ShortName="KanaDoIT" EnableGPUAcceleration="False" ShowInstallMenuItem="False">
   <OutOfBrowserSettings.Blurb>KanaDoIT - Learn Japanese Hiragana and Katakana</OutOfBrowserSettings.Blurb>
   <OutOfBrowserSettings.WindowSettings>
-    <WindowSettings Title="KanaDoIT" />
+    <WindowSettings Title="KanaDoIT" Height="768" Width="1024" />
   </OutOfBrowserSettings.WindowSettings>
   <OutOfBrowserSettings.SecuritySettings>
-    <SecuritySettings ElevatedPermissions="Required" />
+    <SecuritySettings ElevatedPermissions="NotRequired" />
   </OutOfBrowserSettings.SecuritySettings>
   <OutOfBrowserSettings.Icons>
     <Icon Size="16,16">Icons/KanaDoIT16.png</Icon>
