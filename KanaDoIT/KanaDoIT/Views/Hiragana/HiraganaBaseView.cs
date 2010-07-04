@@ -24,7 +24,7 @@ namespace Arbaureal.KanaDoIT.Views.Hiragana
 
         public static Color StaticMenuColour
         {
-            get { return Color.FromArgb(255, 0, 0, 255); }
+            get { return Color.FromArgb(255, 143, 178, 222); }
         }
 
         public Color MenuColour
