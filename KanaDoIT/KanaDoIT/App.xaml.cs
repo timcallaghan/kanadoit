@@ -40,14 +40,11 @@ namespace Arbaureal.KanaDoIT
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             this.CheckAndDownloadUpdateAsync();
-            this.RootVisual = new MainPage();
+            this.RootVisual = new MainPage();            
 
             if (App.Current.IsRunningOutOfBrowser)
             {
-                if (Application.Current.HasElevatedPermissions)
-                {
-                    Application.Current.MainWindow.WindowState = WindowState.Maximized;
-                }
+                Application.Current.MainWindow.WindowState = WindowState.Maximized;
             }
         }
 
