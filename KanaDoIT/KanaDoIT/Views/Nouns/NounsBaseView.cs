@@ -21,7 +21,7 @@ namespace Arbaureal.KanaDoIT.Views.Nouns
 
         public static Color StaticMenuColour
         {
-            get { return Color.FromArgb(255, 200, 0, 200); }
+            get { return Color.FromArgb(255, 247, 169, 247); }
         }
 
         public Color MenuColour

@@ -22,7 +22,7 @@ namespace Arbaureal.KanaDoIT.Views.Katakana
 
         public static Color StaticMenuColour
         {
-            get { return Color.FromArgb(255, 0, 255, 0); }
+            get { return Color.FromArgb(255, 183, 255, 179); }
         }
 
         public Color MenuColour

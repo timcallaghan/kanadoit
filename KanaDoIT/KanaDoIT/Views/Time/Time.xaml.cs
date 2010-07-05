@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using Arbaureal.KanaDoIT.Clock.ClockObjects;
 using Arbaureal.KanaDoIT.Clock.ClockObjects.ClockModel;
 using Arbaureal.KanaDoIT.Clock.ClockObjects.ClockPresenter;
+using Arbaureal.KanaDoIT.BaseResources;
 
 
 namespace Arbaureal.KanaDoIT.Views.Time
@@ -38,6 +39,18 @@ namespace Arbaureal.KanaDoIT.Views.Time
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            KanaDictionary dict = KanaDictionary.Instance;
+
+            foreach (KeyValuePair<int, Word> kvp in dict)
+            {
+                foreach (Run textRun in kvp.Value.GetWordKana(40.0))
+                {
+                    deets.Inlines.Add(textRun);
+                }
+                deets.Inlines.Add(Environment.NewLine);
+                deets.Inlines.Add(kvp.Value.Romaji);
+                deets.Inlines.Add(Environment.NewLine);
+            }            
         }
 
         private void btnNewTime_Click(object sender, RoutedEventArgs e)

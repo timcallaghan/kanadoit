@@ -21,7 +21,7 @@ namespace Arbaureal.KanaDoIT.Views.Time
 
         public static Color StaticMenuColour
         {
-            get { return Color.FromArgb(255, 255, 255, 0); }
+            get { return Color.FromArgb(255, 253, 255, 152); }
         }
 
         public Color MenuColour
