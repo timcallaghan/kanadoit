@@ -26,6 +26,26 @@ namespace Arbaureal.KanaDoIT
             {
                 Installation.Content = "Uninstall";
             }
+
+            foreach (UIElement UIElement in LinksStackPanel.Children)
+            {
+                if (UIElement is HyperlinkButton)
+                {
+                    HyperlinkButton HyperlinkButton = UIElement as HyperlinkButton;
+                    if (Enum.IsDefined(typeof(LearningArea), HyperlinkButton.Content))
+                    {
+                        //LearningArea LearningArea = (LearningArea)Enum.Parse(typeof(LearningArea), HyperlinkButton.Content.ToString(), false);
+                        string LearningAreaBaseView = String.Format("Arbaureal.KanaDoIT.Views.{0}.{0}BaseView", HyperlinkButton.Content.ToString());
+                        Type BaseViewType = Type.GetType(LearningAreaBaseView);
+                        ILearningArea LearningArea = Activator.CreateInstance(BaseViewType) as ILearningArea;
+                        if (LearningArea != null)
+                        {
+                            HyperlinkButton.SetValue(HyperlinkButton.BackgroundProperty, GetBackgroundBrush(LearningArea.MenuColour));
+                            HyperlinkButton.SetValue(HyperlinkButton.ForegroundProperty, GetBackgroundBrush(Colors.Black));
+                        }
+                    }
+                }
+            }
         }
 
         // After the Frame navigates, ensure the HyperlinkButton representing the current page is selected
@@ -90,7 +110,6 @@ namespace Arbaureal.KanaDoIT
                         hlButton.NavigateUri = new Uri(topic.NavigateUri, UriKind.Relative);
                         hlButton.TargetName = "ContentFrame";
                         hlButton.Content = topic.Name;
-                        //hlButton.Style = (Style)Application.Current.Resources["LinkStyle"];
 
                         LinearGradientBrush hlgb = new LinearGradientBrush();
                         GradientStop hlstart = new GradientStop();
@@ -128,6 +147,22 @@ namespace Arbaureal.KanaDoIT
             e.Handled = true;
             ChildWindow errorWin = new ErrorWindow(e.Uri);
             errorWin.Show();
+        }
+
+        private LinearGradientBrush GetBackgroundBrush(Color Color)
+        {
+            LinearGradientBrush gb = new LinearGradientBrush();
+            GradientStop start = new GradientStop();
+            start.Color = Colors.White;
+            start.Offset = 0.0;
+            GradientStop end = new GradientStop();
+            end.Color = Color;
+            end.Offset = 0.5;
+            gb.GradientStops.Add(start);
+            gb.GradientStops.Add(end);
+            gb.StartPoint = new Point(0.5, 0.0);
+            gb.EndPoint = new Point(0.5, 1.0);
+            return gb;
         }
     }
 }

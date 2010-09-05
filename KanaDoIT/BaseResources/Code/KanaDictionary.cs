@@ -53,9 +53,9 @@ namespace Arbaureal.KanaDoIT.BaseResources
     public class Word
     {
         private List<KanaCharInfo> KanaWord;
-        private string EnglishWord;
+        public string EnglishWord { get; private set; }
         public string Romaji;
-        private List<WordCategory> CategoryAssociations;
+        public List<WordCategory> CategoryAssociations { get; private set; }
 
         public Word(string strEnglishWord, List<KanaCharInfo> listCharInfo, List<WordCategory> CategoryAssociations, string Romaji)
         {
@@ -115,6 +115,19 @@ namespace Arbaureal.KanaDoIT.BaseResources
         // not to mark type as beforefieldinit
         static KanaDictionary()
         {
+        }
+
+        public static WordCategories WordCategories
+        {
+            get
+            {
+                return WordCategories.Instance;
+            }
+        }
+
+        public List<int> GetWordKeysForCategory(WordCategory WC)
+        {
+            return this.Where(KVP => KVP.Value.CategoryAssociations.Contains(WC)).Select(KVP => KVP.Key).ToList();
         }
 
         KanaDictionary()

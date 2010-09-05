@@ -147,16 +147,102 @@
       <DependentUpon>Nouns.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Nouns\NounsBaseView.cs" />
+    <Compile Include="Views\Phrases\Introduction.xaml.cs">
+      <DependentUpon>Introduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Phrases\PhrasesBaseView.cs" />
+    <Compile Include="Views\Phrases\PhraseSelection.xaml.cs">
+      <DependentUpon>PhraseSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Phrases\Read.xaml.cs">
+      <DependentUpon>Read.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Phrases\ReadingChallenge.xaml.cs">
+      <DependentUpon>ReadingChallenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Phrases\Write.xaml.cs">
+      <DependentUpon>Write.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Phrases\WritingChallenge.xaml.cs">
+      <DependentUpon>WritingChallenge.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Time\Time.xaml.cs">
       <DependentUpon>Time.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Time\TimeBaseView.cs" />
+    <Compile Include="Views\Words\Introduction.xaml.cs">
+      <DependentUpon>Introduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Words\Read.xaml.cs">
+      <DependentUpon>Read.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Words\ReadingChallenge.xaml.cs">
+      <DependentUpon>ReadingChallenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Words\WordsBaseView.cs" />
+    <Compile Include="Views\Words\WordSelection.xaml.cs">
+      <DependentUpon>WordSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Words\Write.xaml.cs">
+      <DependentUpon>Write.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Words\WritingChallenge.xaml.cs">
+      <DependentUpon>WritingChallenge.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\Phrases\Introduction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Phrases\PhraseSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Phrases\Read.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Phrases\ReadingChallenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Phrases\Write.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Phrases\WritingChallenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Words\Introduction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Words\Read.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Words\ReadingChallenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Words\WordSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Words\Write.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Words\WritingChallenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Resource Include="Assets\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

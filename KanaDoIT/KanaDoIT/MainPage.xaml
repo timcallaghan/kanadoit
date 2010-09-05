@@ -6,7 +6,7 @@
     xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="400">
+    mc:Ignorable="d" d:DesignWidth="845" d:DesignHeight="400">
 
     <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}" Margin="0,0,0,0">
         <Grid.RowDefinitions>
@@ -26,43 +26,45 @@
                 </StackPanel>
             </Border>
 
-            <Border x:Name="LinksBorder" Style="{StaticResource LinksBorderStyle}" HorizontalAlignment="Left" Margin="49,0,0,0" Width="418">
+            <Border x:Name="LinksBorder" Style="{StaticResource LinksBorderStyle}" HorizontalAlignment="Left" Margin="49,0,0,0" Width="580">
                 <StackPanel x:Name="LinksStackPanel" Style="{StaticResource LinksStackPanelStyle}">
 
                     <HyperlinkButton x:Name="Link1" Style="{StaticResource LinkStyle}" 
                                      NavigateUri="/Home" TargetName="ContentFrame" Content="Home"/>
 
-                    <Rectangle x:Name="Divider1" Style="{StaticResource DividerStyle}"/>
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
 
                     <HyperlinkButton x:Name="HiraganLink" Style="{StaticResource LinkStyle}" 
                                      NavigateUri="/Hiragana/Introduction" TargetName="ContentFrame" Content="Hiragana"/>
 
-                    <Rectangle x:Name="Divider2" Style="{StaticResource DividerStyle}"/>
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
 
                     <HyperlinkButton x:Name="KatakanaLink" Style="{StaticResource LinkStyle}" 
                                      NavigateUri="/Katakana/Introduction" TargetName="ContentFrame" Content="Katakana"/>
 
-                    <Rectangle x:Name="Divider3" Style="{StaticResource DividerStyle}"/>
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
+
+                    <HyperlinkButton x:Name="WordsLink" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/Words/Introduction" TargetName="ContentFrame" Content="Words"/>
+
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
+
+                    <HyperlinkButton x:Name="PhrasesLink" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/Phrases/Introduction" TargetName="ContentFrame" Content="Phrases"/>
+
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
 
                     <HyperlinkButton x:Name="NounsLink" Style="{StaticResource LinkStyle}" 
                                      NavigateUri="/Nouns/Nouns" TargetName="ContentFrame" Content="Nouns"/>
 
-                    <Rectangle x:Name="Divider4" Style="{StaticResource DividerStyle}"/>
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
 
                     <HyperlinkButton x:Name="TimeLink" Style="{StaticResource LinkStyle}" 
                                      NavigateUri="/Time/Time" TargetName="ContentFrame" Content="Time"/>
                 </StackPanel>
             </Border>
 			
-			<Border x:Name="UtilsMenu" Style="{StaticResource LinksBorderStyle}" HorizontalAlignment="Right" Width="165" Margin="0,0,0,0">
-				<StackPanel x:Name="UtilsStackPanel" Style="{StaticResource LinksStackPanelStyle}" HorizontalAlignment="Right">
-					<HyperlinkButton x:Name="Installation" Style="{StaticResource LinkStyle}"
-                                     NavigateUri="/Installation" TargetName="ContentFrame" Content="Install"/>
-					<Rectangle x:Name="Divider5" Style="{StaticResource DividerStyle}"/>
-					<HyperlinkButton x:Name="About" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/About" TargetName="ContentFrame" Content="About"/>
-				</StackPanel>
-			</Border>
+			<Border x:Name="UtilsMenu" Style="{StaticResource LinksBorderStyle}" HorizontalAlignment="Right" Width="132" Margin="0,0,25,0"></Border>
         </Grid>
         
         <StackPanel x:Name="TopicMenu" Orientation="Vertical" Grid.Row="1" Grid.Column="0"/>
@@ -81,5 +83,10 @@
                 </navigation:Frame>
             </Border>
         </Border>
+        <StackPanel x:Name="UtilsStackPanel" Style="{StaticResource LinksStackPanelStyle}" HorizontalAlignment="Right" Width="159" Grid.Column="1" Margin="0,7,12,7">
+            <HyperlinkButton x:Name="Installation" Style="{StaticResource LinkStyle}" NavigateUri="/Installation" TargetName="ContentFrame" Content="Install" />
+            <Rectangle x:Name="Divider5" Style="{StaticResource DividerStyle}" />
+            <HyperlinkButton x:Name="About" Style="{StaticResource LinkStyle}" NavigateUri="/About" TargetName="ContentFrame" Content="About" />
+        </StackPanel>
     </Grid>
 </UserControl>

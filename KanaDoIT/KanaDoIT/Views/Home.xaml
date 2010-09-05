@@ -18,6 +18,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
                 <HyperlinkButton x:Name="HiraganLink" 
@@ -41,7 +42,7 @@
                                  HorizontalContentAlignment="Center"/>
 
                 <HyperlinkButton x:Name="NounsLink" 
-                                 Grid.Row="1" Grid.Column="0" Width="200" Height="200"
+                                 Grid.Row="1" Grid.Column="1" Width="200" Height="200"
                                  NavigateUri="/Nouns/Nouns" 
                                  TargetName="ContentFrame" 
                                  Content="Nouns" 
@@ -51,10 +52,30 @@
                                  HorizontalContentAlignment="Center"/>
 
                 <HyperlinkButton x:Name="TimeLink" 
-                                 Grid.Row="1" Grid.Column="1" Width="200" Height="200"
+                                 Grid.Row="1" Grid.Column="2" Width="200" Height="200"
                                  NavigateUri="/Time/Time" 
                                  TargetName="ContentFrame" 
                                  Content="Time" 
+                                 FontSize="32"
+                                 Foreground="Black"
+                                 VerticalContentAlignment="Center"
+                                 HorizontalContentAlignment="Center"/>
+
+                <HyperlinkButton x:Name="WordsLink" 
+                                 Grid.Row="0" Grid.Column="2" Width="200" Height="200"
+                                 NavigateUri="/Words/Introduction" 
+                                 TargetName="ContentFrame" 
+                                 Content="Words" 
+                                 FontSize="32"
+                                 Foreground="Black"
+                                 VerticalContentAlignment="Center"
+                                 HorizontalContentAlignment="Center"/>
+
+                <HyperlinkButton x:Name="PhrasesLink" 
+                                 Grid.Row="1" Grid.Column="0" Width="200" Height="200"
+                                 NavigateUri="/Phrases/Introduction" 
+                                 TargetName="ContentFrame" 
+                                 Content="Phrases" 
                                  FontSize="32"
                                  Foreground="Black"
                                  VerticalContentAlignment="Center"

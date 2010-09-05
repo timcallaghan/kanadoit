@@ -6,6 +6,14 @@
       <ID>1</ID>
       <Title>Days of the Week</Title>
     </WordCategory>
+    <WordCategory>
+      <ID>2</ID>
+      <Title>Dates of the Month</Title>
+    </WordCategory>
+    <WordCategory>
+      <ID>3</ID>
+      <Title>Months of the Year</Title>
+    </WordCategory>
   </WordCategories>
   <Words>
     <Word>

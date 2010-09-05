@@ -10,18 +10,18 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Collections.Generic;
 
-namespace Arbaureal.KanaDoIT.Views.Time
+namespace Arbaureal.KanaDoIT.Views.Phrases
 {
-    public class TimeBaseView : Page, ILearningArea
+    public class PhrasesBaseView : Page, ILearningArea
     {
         public LearningArea LearningArea
         {
-            get { return LearningArea.Time; }
+            get { return LearningArea.Phrases; }
         }
 
         public static Color StaticMenuColour
-        {
-            get { return Color.FromArgb(255, 79, 255, 225); }
+        {            
+            get { return Color.FromArgb(255, 253, 255, 152); }
         }
 
         public Color MenuColour
@@ -33,12 +33,12 @@ namespace Arbaureal.KanaDoIT.Views.Time
         {
             List<Topic> listTopics = new List<Topic>();
 
-            listTopics.Add(new Topic("Time", "/Time/Time"));
-            //listTopics.Add(new Topic(@"Read & Listen", "/Time/ReadnListen"));
-            //listTopics.Add(new Topic("Write", "/Time/Write"));
-            //listTopics.Add(new Topic("Basic Challenge", "/Time/BasicChallenge"));
-            //listTopics.Add(new Topic("Reading Challenge", "/Time/ReadingChallenge"));
-            //listTopics.Add(new Topic("Listening Challenge", "/Time/ListeningChallenge"));
+            listTopics.Add(new Topic("Introduction", "/Phrases/Introduction"));
+            listTopics.Add(new Topic("Phrase Selection", "/Phrases/PhraseSelection"));
+            listTopics.Add(new Topic("Read", "/Phrases/Read"));
+            listTopics.Add(new Topic("Write", "/Phrases/Write"));
+            listTopics.Add(new Topic("Reading Challenge", "/Phrases/ReadingChallenge"));
+            listTopics.Add(new Topic("Writing Challenge", "/Phrases/WritingChallenge"));
 
             return listTopics;
         }

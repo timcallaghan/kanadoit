@@ -18,7 +18,9 @@ namespace Arbaureal.KanaDoIT.Views
         Hiragana,
         Katakana,
         Nouns,
-        Time
+        Time,
+        Words,
+        Phrases
     }
 
     // A topic that is contained in a learning area

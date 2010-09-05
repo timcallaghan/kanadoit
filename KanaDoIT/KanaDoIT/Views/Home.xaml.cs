@@ -15,6 +15,8 @@ using Arbaureal.KanaDoIT.Views.Hiragana;
 using Arbaureal.KanaDoIT.Views.Katakana;
 using Arbaureal.KanaDoIT.Views.Nouns;
 using Arbaureal.KanaDoIT.Views.Time;
+using Arbaureal.KanaDoIT.Views.Words;
+using Arbaureal.KanaDoIT.Views.Phrases;
 
 namespace Arbaureal.KanaDoIT
 {
@@ -28,57 +30,28 @@ namespace Arbaureal.KanaDoIT
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {            
+            SetBackgroundColor(HiraganLink, HiraganaBaseView.StaticMenuColour);
+            SetBackgroundColor(KatakanaLink, KatakanaBaseView.StaticMenuColour);
+            SetBackgroundColor(NounsLink, NounsBaseView.StaticMenuColour);
+            SetBackgroundColor(TimeLink, TimeBaseView.StaticMenuColour);
+            SetBackgroundColor(WordsLink, WordsBaseView.StaticMenuColour);
+            SetBackgroundColor(PhrasesLink, PhrasesBaseView.StaticMenuColour);
+        }
+
+        private void SetBackgroundColor(HyperlinkButton btn, Color Color)
+        {
             LinearGradientBrush gb = new LinearGradientBrush();
             GradientStop start = new GradientStop();
             start.Color = Colors.White;
             start.Offset = 0.0;
             GradientStop end = new GradientStop();
-            end.Color = HiraganaBaseView.StaticMenuColour;
+            end.Color = Color;
             end.Offset = 0.5;
             gb.GradientStops.Add(start);
             gb.GradientStops.Add(end);
             gb.StartPoint = new Point(0.5, 0.0);
             gb.EndPoint = new Point(0.5, 1.0);
-            HiraganLink.Background = gb;
-
-            gb = new LinearGradientBrush();
-            start = new GradientStop();
-            start.Color = Colors.White;
-            start.Offset = 0.0;
-            end = new GradientStop();
-            end.Color = KatakanaBaseView.StaticMenuColour;
-            end.Offset = 0.5;
-            gb.GradientStops.Add(start);
-            gb.GradientStops.Add(end);
-            gb.StartPoint = new Point(0.5, 0.0);
-            gb.EndPoint = new Point(0.5, 1.0);
-            KatakanaLink.Background = gb;
-
-            gb = new LinearGradientBrush();
-            start = new GradientStop();
-            start.Color = Colors.White;
-            start.Offset = 0.0;
-            end = new GradientStop();
-            end.Color = NounsBaseView.StaticMenuColour;
-            end.Offset = 0.5;
-            gb.GradientStops.Add(start);
-            gb.GradientStops.Add(end);
-            gb.StartPoint = new Point(0.5, 0.0);
-            gb.EndPoint = new Point(0.5, 1.0);
-            NounsLink.Background = gb;
-
-            gb = new LinearGradientBrush();
-            start = new GradientStop();
-            start.Color = Colors.White;
-            start.Offset = 0.0;
-            end = new GradientStop();
-            end.Color = TimeBaseView.StaticMenuColour;
-            end.Offset = 0.5;
-            gb.GradientStops.Add(start);
-            gb.GradientStops.Add(end);
-            gb.StartPoint = new Point(0.5, 0.0);
-            gb.EndPoint = new Point(0.5, 1.0);
-            TimeLink.Background = gb;
+            btn.Background = gb;
         }
     }
 }
