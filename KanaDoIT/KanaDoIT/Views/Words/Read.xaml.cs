@@ -67,16 +67,25 @@ namespace Arbaureal.KanaDoIT.Views.Words
             try
             {
                 Word Word = KanaDictionary.Instance[WordsInCategory[CurrentWordIndex]];
-                foreach (Run textRun in Word.GetWordKana(60.0))
+                foreach (Run textRun in Word.GetWordKana(80.0))
                 {
                     kanaPlaceholder.Inlines.Add(textRun);
                 }
-                romajiPlaceholder.Inlines.Add(Word.Romaji);
+
+                if (cbShowRomaji.IsChecked.HasValue && cbShowRomaji.IsChecked.Value)
+                {
+                    romajiPlaceholder.Inlines.Add(Word.Romaji);
+                }
                 englishPlaceholder.Inlines.Add(Word.EnglishWord);
             }
             catch (Exception)
             {
             }
+        }
+
+        private void cbShowRomaji_Checked(object sender, RoutedEventArgs e)
+        {
+            PopulateDisplay();
         }
     }
 }

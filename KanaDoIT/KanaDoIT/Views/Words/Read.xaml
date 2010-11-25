@@ -14,10 +14,11 @@
             <StackPanel x:Name="ContentStackPanel" HorizontalAlignment="Center">
 
                 <TextBlock x:Name="kanaPlaceholder" HorizontalAlignment="Center" Margin="10,10,10,10"/>
-                <TextBlock x:Name="romajiPlaceholder" FontSize="50" HorizontalAlignment="Center"/>
-                <TextBlock x:Name="englishPlaceholder" FontSize="50" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="romajiPlaceholder" FontSize="30" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="englishPlaceholder" FontSize="40" HorizontalAlignment="Center"/>
 
                 <Button x:Name="btnCycle" Click="btnCycle_Click" Content="Next" Width="300"></Button>
+                <CheckBox x:Name="cbShowRomaji" Content="Show Romaji" Checked="cbShowRomaji_Checked" Unchecked="cbShowRomaji_Checked" />
 
             </StackPanel>
         </ScrollViewer>

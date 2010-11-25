@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Web Developer Express 2010
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanaDoIT", "KanaDoIT\KanaDoIT.csproj", "{61CDD108-4B50-421A-8CB1-F9C9ECCF28DB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{074EE1AC-38F2-4157-B533-6E76A3E88F17} = {074EE1AC-38F2-4157-B533-6E76A3E88F17}
@@ -13,6 +13,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanaboard", "Kanaboard\Kanaboard.csproj", "{5CBA5A2B-A751-4AED-B13D-1E32F2691000}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseResources", "BaseResources\BaseResources.csproj", "{9A9A2A51-FD16-4325-8D2D-5084111D92E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArbaurealUILib", "ArbaurealUILib\ArbaurealUILib.csproj", "{A4408F03-4E02-4551-B28A-36001DBDBF58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +42,10 @@ Global
 		{9A9A2A51-FD16-4325-8D2D-5084111D92E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A9A2A51-FD16-4325-8D2D-5084111D92E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A9A2A51-FD16-4325-8D2D-5084111D92E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4408F03-4E02-4551-B28A-36001DBDBF58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4408F03-4E02-4551-B28A-36001DBDBF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4408F03-4E02-4551-B28A-36001DBDBF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4408F03-4E02-4551-B28A-36001DBDBF58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

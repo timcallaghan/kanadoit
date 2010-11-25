@@ -286,6 +286,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ArbaurealUILib\ArbaurealUILib.csproj">
+      <Project>{A4408F03-4E02-4551-B28A-36001DBDBF58}</Project>
+      <Name>ArbaurealUILib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BaseResources\BaseResources.csproj">
       <Project>{9A9A2A51-FD16-4325-8D2D-5084111D92E2}</Project>
       <Name>BaseResources</Name>
