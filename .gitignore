@@ -1,0 +1,39 @@
+
+# /KanaDoIT/
+/KanaDoIT/KanaDoIT.suo
+
+# /KanaDoIT/ArbaurealUILib/
+/KanaDoIT/ArbaurealUILib/*.user
+/KanaDoIT/ArbaurealUILib/Bin
+/KanaDoIT/ArbaurealUILib/obj
+
+# /KanaDoIT/BaseResources/
+/KanaDoIT/BaseResources/Bin
+/KanaDoIT/BaseResources/obj
+
+# /KanaDoIT/Clock/
+/KanaDoIT/Clock/Bin
+/KanaDoIT/Clock/Clock.csproj.user
+/KanaDoIT/Clock/obj
+
+# /KanaDoIT/KanaDoIT/
+/KanaDoIT/KanaDoIT/Bin
+/KanaDoIT/KanaDoIT/KanaDoIT.csproj.user
+/KanaDoIT/KanaDoIT/obj
+
+# /KanaDoIT/KanaDoIT.Web/
+/KanaDoIT/KanaDoIT.Web/KanaDoIT.Web.Publish.xml
+/KanaDoIT/KanaDoIT.Web/KanaDoIT.Web.csproj.user
+/KanaDoIT/KanaDoIT.Web/obj
+
+# /KanaDoIT/KanaDoIT.Web/ClientBin/
+/KanaDoIT/KanaDoIT.Web/ClientBin/KanaDoIT.xap
+
+# /KanaDoIT/KanaDoIT.Web/bin/
+/KanaDoIT/KanaDoIT.Web/bin/KanaDoIT.Web.dll
+/KanaDoIT/KanaDoIT.Web/bin/KanaDoIT.Web.pdb
+
+# /KanaDoIT/Kanaboard/
+/KanaDoIT/Kanaboard/Bin
+/KanaDoIT/Kanaboard/Kanaboard.csproj.user
+/KanaDoIT/Kanaboard/obj
