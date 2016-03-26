@@ -39,3 +39,5 @@
 /KanaDoIT/Kanaboard/obj
 *.suo
 KanaDoIT/KanaDoIT.Web/Properties/PublishProfiles/Local Deploy.pubxml.user
+KanaDoIT/.vs/
+KanaDoIT/KanaDoIT.Web/bin/

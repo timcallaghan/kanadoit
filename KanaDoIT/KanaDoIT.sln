@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanaDoIT", "KanaDoIT\KanaDoIT.csproj", "{61CDD108-4B50-421A-8CB1-F9C9ECCF28DB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{074EE1AC-38F2-4157-B533-6E76A3E88F17} = {074EE1AC-38F2-4157-B533-6E76A3E88F17}
